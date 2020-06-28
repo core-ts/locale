@@ -1,0 +1,21 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es5",
+    "baseUrl": "./src",
+    "outDir": "./lib",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "pretty": false,
+    "sourceMap": false,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "removeComments": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
