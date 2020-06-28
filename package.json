@@ -1,26 +1,26 @@
 {
   "name": "locale-service",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Locale Service",
   "main": "./lib/index.js",
   "types": "./src/index.ts",
   "scripts": {
     "build:lib": "tsc",
-    "clean:lib": "rimraf lib",
-    "postinstall": "npm run clean:lib && npm run build:lib"
+    "clean:lib": "rimraf lib"
   },
   "devDependencies": {
     "tslint": "5.10.0",
     "typescript": "^3.3.3333"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com/common-ts/locale"
   },
   "keywords": [
-    "locale"
+    "locale",
+    "currency"
   ]
 }

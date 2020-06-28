@@ -1,9 +1,31 @@
-import CurrencyResources from './CurrencyResources';
+import {currencyResources} from './CurrencyResources';
+
+let initCurrency = false;
+const cr: any = {};
+
+interface CurrencyAlias {
+  a?: string;
+  b: number;
+  c: string;
+}
 
 export interface Currency {
-  currencyCode: string;
-  currencySymbol: string;
+  currencyCode?: string;
   decimalDigits: number;
+  currencySymbol: string;
+}
+
+function initCurrencyResources() {
+  const keys = Object.keys(currencyResources);
+  for (const key of keys) {
+    const x: CurrencyAlias = currencyResources[key];
+    const currency: Currency = {
+      currencyCode: key,
+      decimalDigits: (x.b?x.b:2),
+      currencySymbol: x.c
+    };
+    cr[key] = currency;
+  }
 }
 
 export interface CurrencyService {
@@ -16,7 +38,11 @@ export class DefaultCurrencyService implements CurrencyService {
       return null;
     }
     const code = currencyCode.toUpperCase();
-    const c = CurrencyResources[code];
-    return (c ? {currencyCode: code, currencySymbol: c.currencySymbol, decimalDigits: c.decimalDigits} : null);
+    if (!initCurrency) {
+      initCurrencyResources();
+      initCurrency = true;
+    }
+    const c = cr[code];
+    return c;
   }
 }

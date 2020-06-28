@@ -1,528 +1,318 @@
 // tslint:disable:quotemark
-const CurrencyResources: any = {
+export const currencyResources: any = {
   "AED": {
-    "decimalDigits": 2,
-    "currencySymbol": "د.إ.‏"
+    "c": "د.إ.‏"
   },
   "AFN": {
-    "decimalDigits": 2,
-    "currencySymbol": "؋"
+    "c": "؋"
   },
   "ALL": {
-    "decimalDigits": 2,
-    "currencySymbol": "Lek"
+    "c": "Lek"
   },
   "AMD": {
-    "decimalDigits": 2,
-    "currencySymbol": "դր."
+    "c": "դր."
   },
   "ARS": {
-    "decimalDigits": 2,
-    "currencySymbol": "$"
+    "c": "$"
   },
   "AUD": {
-    "decimalDigits": 2,
-    "currencySymbol": "$"
+    "c": "$"
   },
   "AZN": {
-    "decimalDigits": 2,
-    "currencySymbol": "₼"
+    "c": "₼"
   },
-  /*
-  "AZN": {
-    "decimalDigits": 2,
-    "currencySymbol": "man."
-  },
-  "AZN": {
-    "decimalDigits": 2,
-    "currencySymbol": "ман."
-  },
-  */
   "BAM": {
-    "decimalDigits": 2,
-    "currencySymbol": "КМ"
+    "c": "КМ"
   },
   "BDT": {
-    "decimalDigits": 2,
-    "currencySymbol": "৳"
+    "c": "৳"
   },
   "BGN": {
-    "decimalDigits": 2,
-    "currencySymbol": "лв."
+    "c": "лв."
   },
   "BHD": {
-    "decimalDigits": 3,
-    "currencySymbol": "د.ب.‏"
+    "b": 3,
+    "c": "د.ب.‏"
   },
   "BND": {
-    "decimalDigits": 0,
-    "currencySymbol": "$"
+    "b": 0,
+    "c": "$"
   },
   "BOB": {
-    "decimalDigits": 2,
-    "currencySymbol": "$b"
+    "c": "$b"
   },
   "BRL": {
-    "decimalDigits": 2,
-    "currencySymbol": "R$"
+    "c": "R$"
   },
   "BYR": {
-    "decimalDigits": 2,
-    "currencySymbol": "р."
+    "c": "р."
   },
   "BZD": {
-    "decimalDigits": 2,
-    "currencySymbol": "BZ$"
+    "c": "BZ$"
   },
   "CAD": {
-    "decimalDigits": 2,
-    "currencySymbol": "$"
+    "c": "$"
   },
-  /*
   "CHF": {
-    "decimalDigits": 2,
-    "currencySymbol": "CHF"
-  },
-  */
-  "CHF": {
-    "decimalDigits": 2,
-    "currencySymbol": "Fr."
+    "c": "Fr."
   },
   "CLP": {
-    "decimalDigits": 2,
-    "currencySymbol": "$"
+    "c": "$"
   },
   "CNY": {
-    "decimalDigits": 2,
-    "currencySymbol": "¥"
+    "c": "¥"
   },
   "COP": {
-    "decimalDigits": 2,
-    "currencySymbol": "$"
+    "c": "$"
   },
   "CRC": {
-    "decimalDigits": 2,
-    "currencySymbol": "₡"
+    "c": "₡"
   },
   "CSD": {
-    "decimalDigits": 2,
-    "currencySymbol": "Din."
+    "c": "Din."
   },
-  /*
-  "CSD": {
-    "decimalDigits": 2,
-    "currencySymbol": "Дин."
-  },
-  */
   "CZK": {
-    "decimalDigits": 2,
-    "currencySymbol": "Kč"
+    "c": "Kč"
   },
   "DKK": {
-    "decimalDigits": 2,
-    "currencySymbol": "kr."
+    "c": "kr."
   },
   "DOP": {
-    "decimalDigits": 2,
-    "currencySymbol": "RD$"
+    "c": "RD$"
   },
   "DZD": {
-    "decimalDigits": 2,
-    "currencySymbol": "DA"
+    "c": "DA"
   },
-  /*
-  "DZD": {
-    "decimalDigits": 2,
-    "currencySymbol": "DZD"
-  },
-  "DZD": {
-    "decimalDigits": 2,
-    "currencySymbol": "د.ج.‏"
-  },
-  */
   "EEK": {
-    "decimalDigits": 2,
-    "currencySymbol": "kr"
+    "c": "kr"
   },
   "EGP": {
-    "decimalDigits": 2,
-    "currencySymbol": "ج.م.‏"
+    "c": "ج.م.‏"
   },
   "ETB": {
-    "decimalDigits": 2,
-    "currencySymbol": "ETB"
+    "c": "ETB"
   },
   "EUR": {
-    "decimalDigits": 2,
-    "currencySymbol": "€"
+    "c": "€"
   },
   "GBP": {
-    "decimalDigits": 2,
-    "currencySymbol": "£"
+    "c": "£"
   },
   "GEL": {
-    "decimalDigits": 2,
-    "currencySymbol": "Lari"
+    "c": "Lari"
   },
   "GTQ": {
-    "decimalDigits": 2,
-    "currencySymbol": "Q"
+    "c": "Q"
   },
   "HKD": {
-    "decimalDigits": 2,
-    "currencySymbol": "HK$"
+    "c": "HK$"
   },
   "HNL": {
-    "decimalDigits": 2,
-    "currencySymbol": "L."
+    "c": "L."
   },
   "HRK": {
-    "decimalDigits": 2,
-    "currencySymbol": "kn"
+    "c": "kn"
   },
   "HUF": {
-    "decimalDigits": 2,
-    "currencySymbol": "Ft"
+    "c": "Ft"
   },
   "IDR": {
-    "decimalDigits": 0,
-    "currencySymbol": "Rp"
+    "b": 0,
+    "c": "Rp"
   },
   "ILS": {
-    "decimalDigits": 2,
-    "currencySymbol": "₪"
+    "c": "₪"
   },
   "INR": {
-    "decimalDigits": 2,
-    "currencySymbol": "Rs."
+    "c": "Rs."
   },
-  /*
-  "INR": {
-    "decimalDigits": 2,
-    "currencySymbol": "रु"
-  },
-  "INR": {
-    "decimalDigits": 2,
-    "currencySymbol": "ট"
-  },
-  "INR": {
-    "decimalDigits": 2,
-    "currencySymbol": "টা"
-  },
-  "INR": {
-    "decimalDigits": 2,
-    "currencySymbol": "ਰੁ"
-  },
-  "INR": {
-    "decimalDigits": 2,
-    "currencySymbol": "રૂ"
-  },
-  "INR": {
-    "decimalDigits": 2,
-    "currencySymbol": "ଟ"
-  },
-  "INR": {
-    "decimalDigits": 2,
-    "currencySymbol": "ரூ"
-  },
-  "INR": {
-    "decimalDigits": 2,
-    "currencySymbol": "రూ"
-  },
-  "INR": {
-    "decimalDigits": 2,
-    "currencySymbol": "ರೂ"
-  },
-  "INR": {
-    "decimalDigits": 2,
-    "currencySymbol": "ക"
-  },
-  "IQD": {
-    "decimalDigits": 2,
-    "currencySymbol": "د.ع.‏"
-  },
-  "IRR": {
-    "decimalDigits": 2,
-    "currencySymbol": "ريال"
-  },
-  */
   "ISK": {
-    "decimalDigits": 0,
-    "currencySymbol": "kr."
+    "b": 0,
+    "c": "kr."
   },
   "JMD": {
-    "decimalDigits": 2,
-    "currencySymbol": "J$"
+    "c": "J$"
   },
   "JOD": {
-    "decimalDigits": 3,
-    "currencySymbol": "د.ا.‏"
+    "b": 3,
+    "c": "د.ا.‏"
   },
   "JPY": {
-    "decimalDigits": 0,
-    "currencySymbol": "¥"
+    "b": 0,
+    "c": "¥"
   },
   "KES": {
-    "decimalDigits": 2,
-    "currencySymbol": "S"
+    "c": "S"
   },
   "KGS": {
-    "decimalDigits": 2,
-    "currencySymbol": "сом"
+    "c": "сом"
   },
   "KHR": {
-    "decimalDigits": 2,
-    "currencySymbol": "៛"
+    "c": "៛"
   },
   "KRW": {
-    "decimalDigits": 0,
-    "currencySymbol": "₩"
+    "b": 0,
+    "c": "₩"
   },
   "KWD": {
-    "decimalDigits": 3,
-    "currencySymbol": "د.ك.‏"
+    "b": 3,
+    "c": "د.ك.‏"
   },
   "KZT": {
-    "decimalDigits": 2,
-    "currencySymbol": "Т"
+    "c": "Т"
   },
   "LAK": {
-    "decimalDigits": 2,
-    "currencySymbol": "₭"
+    "c": "₭"
   },
   "LBP": {
-    "decimalDigits": 2,
-    "currencySymbol": "ل.ل.‏"
+    "c": "ل.ل.‏"
   },
   "LKR": {
-    "decimalDigits": 2,
-    "currencySymbol": "රු."
+    "c": "රු."
   },
   "LTL": {
-    "decimalDigits": 2,
-    "currencySymbol": "Lt"
+    "c": "Lt"
   },
   "LVL": {
-    "decimalDigits": 2,
-    "currencySymbol": "Ls"
+    "c": "Ls"
   },
   "LYD": {
-    "decimalDigits": 3,
-    "currencySymbol": "د.ل.‏"
+    "b": 3,
+    "c": "د.ل.‏"
   },
   "MAD": {
-    "decimalDigits": 2,
-    "currencySymbol": "د.م.‏"
+    "c": "د.م.‏"
   },
   "MKD": {
-    "decimalDigits": 2,
-    "currencySymbol": "ден."
+    "c": "ден."
   },
   "MNT": {
-    "decimalDigits": 2,
-    "currencySymbol": "₮"
+    "c": "₮"
   },
   "MOP": {
-    "decimalDigits": 2,
-    "currencySymbol": "MOP"
+    "c": "MOP"
   },
   "MVR": {
-    "decimalDigits": 2,
-    "currencySymbol": "ރ."
+    "c": "ރ."
   },
   "MXN": {
-    "decimalDigits": 2,
-    "currencySymbol": "$"
+    "c": "$"
   },
-  /*
   "MYR": {
-    "decimalDigits": 0,
-    "currencySymbol": "RM"
-  },
-  */
-  "MYR": {
-    "decimalDigits": 2,
-    "currencySymbol": "RM"
+    "c": "RM"
   },
   "NIO": {
-    "decimalDigits": 2,
-    "currencySymbol": "C$"
+    "c": "C$"
   },
-  /*
-  "NIO": {
-    "decimalDigits": 2,
-    "currencySymbol": "N"
-  },
-  */
   "NOK": {
-    "decimalDigits": 2,
-    "currencySymbol": "kr"
+    "c": "kr"
   },
   "NPR": {
-    "decimalDigits": 2,
-    "currencySymbol": "रु"
+    "c": "रु"
   },
   "NZD": {
-    "decimalDigits": 2,
-    "currencySymbol": "$"
+    "c": "$"
   },
   "OMR": {
-    "decimalDigits": 3,
-    "currencySymbol": "ر.ع.‏"
+    "b": 3,
+    "c": "ر.ع.‏"
   },
   "PAB": {
-    "decimalDigits": 2,
-    "currencySymbol": "B/."
+    "c": "B/."
   },
   "PEN": {
-    "decimalDigits": 2,
-    "currencySymbol": "S/."
+    "c": "S/."
   },
   "PHP": {
-    "decimalDigits": 2,
-    "currencySymbol": "Php"
+    "c": "Php"
   },
   "PKR": {
-    "decimalDigits": 2,
-    "currencySymbol": "Rs"
+    "c": "Rs"
   },
   "PLN": {
-    "decimalDigits": 2,
-    "currencySymbol": "zł"
+    "c": "zł"
   },
   "PYG": {
-    "decimalDigits": 2,
-    "currencySymbol": "Gs"
+    "c": "Gs"
   },
   "QAR": {
-    "decimalDigits": 2,
-    "currencySymbol": "ر.ق.‏"
+    "c": "ر.ق.‏"
   },
   "RON": {
-    "decimalDigits": 2,
-    "currencySymbol": "lei"
+    "c": "lei"
   },
   "RSD": {
-    "decimalDigits": 2,
-    "currencySymbol": "Din."
-  },
-  /*
-  "RSD": {
-    "decimalDigits": 2,
-    "currencySymbol": "Дин."
-  },
-  */
-  "RUB": {
-    "decimalDigits": 2,
-    "currencySymbol": "₽"
-  },
-  /*
-  "RUB": {
-    "decimalDigits": 2,
-    "currencySymbol": "һ."
+    "c": "Din."
   },
   "RUB": {
-    "decimalDigits": 2,
-    "currencySymbol": "р."
+    "c": "₽"
   },
-  "RUB": {
-    "decimalDigits": 2,
-    "currencySymbol": "с."
-  },*/
   "RWF": {
-    "decimalDigits": 2,
-    "currencySymbol": "RWF"
+    "c": "RWF"
   },
   "SAR": {
-    "decimalDigits": 2,
-    "currencySymbol": "ر.س.‏"
+    "c": "ر.س.‏"
   },
   "SEK": {
-    "decimalDigits": 2,
-    "currencySymbol": "kr"
+    "c": "kr"
   },
   "SGD": {
-    "decimalDigits": 2,
-    "currencySymbol": "$"
+    "c": "$"
   },
   "SYP": {
-    "decimalDigits": 2,
-    "currencySymbol": "ل.س.‏"
+    "c": "ل.س.‏"
   },
   "THB": {
-    "decimalDigits": 2,
-    "currencySymbol": "฿"
+    "c": "฿"
   },
   "TJS": {
-    "decimalDigits": 2,
-    "currencySymbol": "т.р."
+    "c": "т.р."
   },
   "TMT": {
-    "decimalDigits": 2,
-    "currencySymbol": "m."
+    "c": "m."
   },
   "TND": {
-    "decimalDigits": 3,
-    "currencySymbol": "د.ت.‏"
+    "b": 3,
+    "c": "د.ت.‏"
   },
   "TRY": {
-    "decimalDigits": 2,
-    "currencySymbol": "TL"
+    "c": "TL"
   },
   "TTD": {
-    "decimalDigits": 2,
-    "currencySymbol": "TT$"
+    "c": "TT$"
   },
   "TWD": {
-    "decimalDigits": 2,
-    "currencySymbol": "NT$"
+    "c": "NT$"
   },
   "UAH": {
-    "decimalDigits": 2,
-    "currencySymbol": "₴"
+    "c": "₴"
   },
   "USD": {
-    "decimalDigits": 2,
-    "currencySymbol": "$"
+    "c": "$"
   },
   "UYU": {
-    "decimalDigits": 2,
-    "currencySymbol": "$U"
+    "c": "$U"
   },
   "UZS": {
-    "decimalDigits": 0,
-    "currencySymbol": "so'm"
+    "c": "so'm"
   },
-  /*
-  "UZS": {
-    "decimalDigits": 2,
-    "currencySymbol": "сўм"
-  },
-  */
   "VEF": {
-    "decimalDigits": 2,
-    "currencySymbol": "Bs. F."
+    "c": "Bs. F."
   },
   "VND": {
-    "decimalDigits": 2,
-    "currencySymbol": "₫"
+    "b": 0,
+    "c": "₫"
   },
   "XOF": {
-    "decimalDigits": 2,
-    "currencySymbol": "XOF"
+    "c": "XOF"
   },
   "YER": {
-    "decimalDigits": 2,
-    "currencySymbol": "ر.ي.‏"
+    "c": "ر.ي.‏"
   },
   "ZAR": {
-    "decimalDigits": 2,
-    "currencySymbol": "R"
+    "c": "R"
   },
   "ZWL": {
-    "decimalDigits": 2,
-    "currencySymbol": "Z$"
+    "c": "Z$"
   }
 };
-
-export default CurrencyResources;

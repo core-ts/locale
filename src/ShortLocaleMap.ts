@@ -1,4 +1,4 @@
-const ShortLocaleIdMap: any = {
+export const shortLocaleMap: any = {
   'af': 'af-ZA',
   'am': 'am-ET',
   'ar': 'ar-AE',
@@ -123,5 +123,3 @@ const ShortLocaleIdMap: any = {
   'zh': 'zh-CN',
   'zu': 'zu-ZA',
 };
-
-export default ShortLocaleIdMap;

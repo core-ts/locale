@@ -1,6 +1,29 @@
-import CurrencyResources from './CurrencyResources';
-import LocaleResources from './LocaleResources';
-import ShortLocaleIdMap from './ShortLocaleIdMap';
+import {currencyResources} from './CurrencyResources';
+import {localeResources} from './LocaleResources';
+import {shortLocaleMap} from './ShortLocaleMap';
+
+let initLocale = false;
+const lr: any = {};
+
+interface CurrencyAlias {
+  a?: string;
+  b: number;
+  c: string;
+}
+
+interface LocaleAlias {
+  a?: string;
+  b: string;
+  c: string;
+  d: number;
+  e: string;
+  f: string;
+  g: number;
+  h: string;
+  i: string;
+  j: number;
+  k?: string;
+}
 
 export interface Locale {
   id?: string;
@@ -16,24 +39,61 @@ export interface Locale {
   currencySample?: string;
 }
 
+function initLocaleResources() {
+  const keys = Object.keys(localeResources);
+  for (const key of keys) {
+    const x: LocaleAlias = localeResources[key];
+    const locale: Locale = {
+      id: x.a,
+      countryCode: x.b,
+      dateFormat: (x.c?x.c:'dd/MM/yyyy'),
+      firstDayOfWeek: (x.d?x.d:2),
+      decimalSeparator: (x.e?x.e:'.'),
+      groupSeparator: (x.f?x.f:','),
+      decimalDigits: (x.g?x.g:2),
+      currencyCode: (x.h?x.h:'EUR'),
+      currencySymbol: (x.i?x.i:'€'),
+      currencyPattern: (x.j?x.j:2),
+      currencySample: x.k
+    };
+    lr[key] = locale;
+  }
+}
+
 export interface LocaleService {
   getLocale(id: string): Locale;
   getLocaleOrDefault(id: string): Locale;
-  getZeroCurrencyByLanguage(language: string);
-  getZeroCurrency(locale: Locale);
+  getZeroCurrencyByLanguage(language: string): string;
+  getZeroCurrency(locale: Locale): string;
   formatCurrency(value: any, currencyCode: string, locale: Locale, includingCurrencySymbol?: boolean): string;
   formatInteger(value: any, locale: Locale): string;
   formatNumber(value: number, scale: number, locale: Locale): string;
-  format(v: number, format: string, locale: Locale);
+  format(v: number, format: string, locale: Locale): string;
 }
 
 export class DefaultLocaleService implements LocaleService {
-  // private _nreg = / |\$|€|£|¥|'|٬|،| /g;
   private _r1 = / |,|\$|€|£|¥|'|٬|،| /g;
   private _r2 = / |\.|\$|€|£|¥|'|٬|،| /g;
   private _r3 = /,/g;
+  constructor() {
+    this.parseNumber = this.parseNumber.bind(this);
+    this.round = this.round.bind(this);
+    this.getLocaleFromResources = this.getLocaleFromResources.bind(this);
+    this._formatNumber = this._formatNumber.bind(this);
+    this.padRight = this.padRight.bind(this);
+    this._format = this._format.bind(this);
 
-  parseNumber(value: string, locale?: Locale, scale?: number): number {
+    this.getLocale = this.getLocale.bind(this);
+    this.getLocaleOrDefault = this.getLocaleOrDefault.bind(this);
+    this.getZeroCurrencyByLanguage = this.getZeroCurrencyByLanguage.bind(this);
+    this.getZeroCurrency = this.getZeroCurrency.bind(this);
+    this.formatCurrency = this.formatCurrency.bind(this);
+    this.formatInteger = this.formatInteger.bind(this);
+    this.formatNumber = this.formatNumber.bind(this);
+    this.format = this.format.bind(this);
+  }
+
+  private parseNumber(value: string, locale?: Locale, scale?: number): number {
     if (!locale) {
       locale = this.getLocale('en-US');
     }
@@ -55,14 +115,10 @@ export class DefaultLocaleService implements LocaleService {
     }
   }
 
-  private round(v: number, scale: number = null): number {
-    return (scale ? parseFloat(v.toFixed(scale)) : v);
-  }
-
   getLocale(id: string): Locale {
     let locale = this.getLocaleFromResources(id);
     if (!locale) {
-      const newId = ShortLocaleIdMap[id];
+      const newId = shortLocaleMap[id];
       if (!newId) {
         return null;
       }
@@ -74,7 +130,7 @@ export class DefaultLocaleService implements LocaleService {
   getLocaleOrDefault(id: string): Locale {
     let locale = this.getLocaleFromResources(id);
     if (!locale) {
-      const newId = ShortLocaleIdMap[id];
+      const newId = shortLocaleMap[id];
       if (!newId) {
         return null;
       }
@@ -87,14 +143,18 @@ export class DefaultLocaleService implements LocaleService {
   }
 
   private getLocaleFromResources(id: string): Locale {
-    return LocaleResources[id];
+    if (!initLocale) {
+      initLocaleResources();
+      initLocale = true;
+    }
+    return lr[id];
   }
 
-  getZeroCurrencyByLanguage(language: string) {
+  getZeroCurrencyByLanguage(language: string): string {
     return this.getZeroCurrency(this.getLocale(language));
   }
 
-  getZeroCurrency(locale: Locale) {
+  getZeroCurrency(locale: Locale): string {
     if (locale) {
       if (locale.decimalDigits <= 0) {
         return '0';
@@ -117,20 +177,20 @@ export class DefaultLocaleService implements LocaleService {
     }
 
     currencyCode = currencyCode.toUpperCase();
-    let currency = CurrencyResources[currencyCode];
+    let currency: CurrencyAlias = currencyResources[currencyCode];
     if (!currency) {
-      currency = CurrencyResources['USD'];
+      currency = currencyResources['USD'];
     }
     let v;
     if (locale) {
       // const scale = (locale.decimalDigits && locale.decimalDigits >= 0 ? locale.decimalDigits : 2);
-      const scale = currency.decimalDigits;
+      const scale = currency.b;
       v = this._formatNumber(value, scale, locale.decimalSeparator, locale.groupSeparator);
     } else {
-      v = this._formatNumber(value, currency.decimalDigits, '.', ',');
+      v = this._formatNumber(value, currency.b, '.', ',');
     }
     if (locale && includingCurrencySymbol) {
-      const symbol = (locale.currencyCode === currencyCode ? locale.currencySymbol : currency.currencySymbol);
+      const symbol = (locale.currencyCode === currencyCode ? locale.currencySymbol : currency.c);
       switch (locale.currencyPattern) {
         case 0:
           v = symbol + v;
@@ -167,7 +227,7 @@ export class DefaultLocaleService implements LocaleService {
     }
   }
 
-  format(v: number, format: string, locale: Locale) {
+  format(v: number, format: string, locale: Locale): string {
     let f = this._format(v, format);
     if (locale) {
       if (locale.decimalSeparator !== '.') {
@@ -182,7 +242,30 @@ export class DefaultLocaleService implements LocaleService {
       return f;
     }
   }
-  _formatNumber(value: number, scale: number, decimalSeparator: string, groupSeparator: string): string {
+
+  private padRight(str: string, length: number, pad: string): string {
+    if (!str) {
+      return str;
+    }
+    if (typeof str !== 'string') {
+      str = '' + str;
+    }
+    if (str.length >= length) {
+      return str;
+    }
+    let str2 = str;
+    if (!pad) {
+      pad = ' ';
+    }
+    while (str2.length < length) {
+      str2 = str2 + pad;
+    }
+    return str2;
+  }
+  private round(v: number, scale: number = null): number {
+    return (scale ? parseFloat(v.toFixed(scale)) : v);
+  }
+  private _formatNumber(value: number, scale: number, decimalSeparator: string, groupSeparator: string): string {
     if (!value) {
       return '';
     }
@@ -207,26 +290,6 @@ export class DefaultLocaleService implements LocaleService {
     } else {
       return arr.reverse().join('') + decimalSeparator + x[1];
     }
-  }
-
-  private padRight(str, length, pad) {
-    if (!str) {
-      return str;
-    }
-    if (typeof str !== 'string') {
-      str = '' + str;
-    }
-    if (str.length >= length) {
-      return str;
-    }
-    let str2 = str;
-    if (!pad) {
-      pad = ' ';
-    }
-    while (str2.length < length) {
-      str2 = str2 + pad;
-    }
-    return str2;
   }
   /* tslint:disable */
   private _format(a: any, b: any): string {

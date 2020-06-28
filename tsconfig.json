@@ -6,10 +6,10 @@
     "outDir": "./lib",
     "module": "commonjs",
     "moduleResolution": "node",
-    "pretty": false,
+    "pretty": true,
     "sourceMap": false,
-    "declaration": true,
-    "experimentalDecorators": true,
+    "declaration": false,
+    "experimentalDecorators": false,
     "removeComments": true
   },
   "include": [
