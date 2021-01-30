@@ -46,23 +46,28 @@ function initLocaleResources() {
     const locale: Locale = {
       id: x.a,
       countryCode: x.b,
-      dateFormat: (x.c?x.c:'dd/MM/yyyy'),
-      firstDayOfWeek: (x.d?x.d:2),
-      decimalSeparator: (x.e?x.e:'.'),
-      groupSeparator: (x.f?x.f:','),
-      decimalDigits: (x.g?x.g:2),
-      currencyCode: (x.h?x.h:'EUR'),
-      currencySymbol: (x.i?x.i:'€'),
-      currencyPattern: (x.j?x.j:2),
+      dateFormat: (x.c ? x.c : 'dd/MM/yyyy'),
+      firstDayOfWeek: (x.d ? x.d : 2),
+      decimalSeparator: (x.e ? x.e : '.'),
+      groupSeparator: (x.f ? x.f : ','),
+      decimalDigits: (x.g ? x.g : 2),
+      currencyCode: (x.h ? x.h : 'EUR'),
+      currencySymbol: (x.i ? x.i : '€'),
+      currencyPattern: (x.j ? x.j : 2),
       currencySample: x.k
     };
     lr[key] = locale;
   }
 }
-
+function getLocaleFromResources(id: string): Locale {
+  if (!initLocale) {
+    initLocaleResources();
+    initLocale = true;
+  }
+  return lr[id];
+}
 export interface LocaleService {
-  getLocale(id: string): Locale;
-  getLocaleOrDefault(id: string): Locale;
+  locale(id: string): Locale;
   getZeroCurrencyByLanguage(language: string): string;
   getZeroCurrency(locale: Locale): string;
   formatCurrency(value: any, currencyCode: string, locale: Locale, includingCurrencySymbol?: boolean): string;
@@ -70,21 +75,12 @@ export interface LocaleService {
   formatNumber(value: number, scale: number, locale: Locale): string;
   format(v: number, format: string, locale: Locale): string;
 }
-
+const r1 = / |,|\$|€|£|¥|'|٬|،| /g;
+const r2 = / |\.|\$|€|£|¥|'|٬|،| /g;
+const r3 = /,/g;
 export class DefaultLocaleService implements LocaleService {
-  private _r1 = / |,|\$|€|£|¥|'|٬|،| /g;
-  private _r2 = / |\.|\$|€|£|¥|'|٬|،| /g;
-  private _r3 = /,/g;
   constructor() {
-    this.parseNumber = this.parseNumber.bind(this);
-    this.round = this.round.bind(this);
-    this.getLocaleFromResources = this.getLocaleFromResources.bind(this);
-    this._formatNumber = this._formatNumber.bind(this);
-    this.padRight = this.padRight.bind(this);
-    this._format = this._format.bind(this);
-
-    this.getLocale = this.getLocale.bind(this);
-    this.getLocaleOrDefault = this.getLocaleOrDefault.bind(this);
+    this.locale = this.locale.bind(this);
     this.getZeroCurrencyByLanguage = this.getZeroCurrencyByLanguage.bind(this);
     this.getZeroCurrency = this.getZeroCurrency.bind(this);
     this.formatCurrency = this.formatCurrency.bind(this);
@@ -93,65 +89,20 @@ export class DefaultLocaleService implements LocaleService {
     this.format = this.format.bind(this);
   }
 
-  private parseNumber(value: string, locale?: Locale, scale?: number): number {
-    if (!locale) {
-      locale = this.getLocale('en-US');
-    }
-    if (locale.decimalSeparator === '.') {
-      const n2: any = value.replace(this._r1, '');
-      if (isNaN(n2)) {
-        return null;
-      } else {
-        return this.round(n2, scale);
-      }
-    } else {
-      const n1 = value.replace(this._r2, '');
-      const n2: any = n1.replace(locale.groupSeparator, '.');
-      if (isNaN(n2)) {
-        return null;
-      } else {
-        return this.round(n2, scale);
-      }
-    }
-  }
-
-  getLocale(id: string): Locale {
-    let locale = this.getLocaleFromResources(id);
+  locale(id: string): Locale {
+    let locale = getLocaleFromResources(id);
     if (!locale) {
       const newId = shortLocaleMap[id];
       if (!newId) {
         return null;
       }
-      locale = this.getLocaleFromResources(newId);
+      locale = getLocaleFromResources(newId);
     }
     return locale;
-  }
-
-  getLocaleOrDefault(id: string): Locale {
-    let locale = this.getLocaleFromResources(id);
-    if (!locale) {
-      const newId = shortLocaleMap[id];
-      if (!newId) {
-        return null;
-      }
-      locale = this.getLocaleFromResources(newId);
-    }
-    if (!locale) {
-      locale = this.getLocaleFromResources('en-US');
-    }
-    return locale;
-  }
-
-  private getLocaleFromResources(id: string): Locale {
-    if (!initLocale) {
-      initLocaleResources();
-      initLocale = true;
-    }
-    return lr[id];
   }
 
   getZeroCurrencyByLanguage(language: string): string {
-    return this.getZeroCurrency(this.getLocale(language));
+    return this.getZeroCurrency(this.locale(language));
   }
 
   getZeroCurrency(locale: Locale): string {
@@ -161,14 +112,14 @@ export class DefaultLocaleService implements LocaleService {
       } else {
         const start = '0' + locale.decimalSeparator;
         const padLength = start.length + locale.decimalDigits;
-        return this.padRight(start, padLength, '0');
+        return padRight(start, padLength, '0');
       }
     } else  {
       return '0.00';
     }
   }
 
-  formatCurrency(value: number, currencyCode: string, locale?: Locale, includingCurrencySymbol: boolean = false): string {
+  formatCurrency(value: number, currencyCode: string, locale?: Locale, includingCurrencySymbol?: boolean): string {
     if (!value) {
       return '';
     }
@@ -181,13 +132,13 @@ export class DefaultLocaleService implements LocaleService {
     if (!currency) {
       currency = currencyResources['USD'];
     }
-    let v;
+    let v: string;
     if (locale) {
       // const scale = (locale.decimalDigits && locale.decimalDigits >= 0 ? locale.decimalDigits : 2);
       const scale = currency.b;
-      v = this._formatNumber(value, scale, locale.decimalSeparator, locale.groupSeparator);
+      v = _formatNumber(value, scale, locale.decimalSeparator, locale.groupSeparator);
     } else {
-      v = this._formatNumber(value, currency.b, '.', ',');
+      v = _formatNumber(value, currency.b, '.', ',');
     }
     if (locale && includingCurrencySymbol) {
       const symbol = (locale.currencyCode === currencyCode ? locale.currencySymbol : currency.c);
@@ -213,105 +164,125 @@ export class DefaultLocaleService implements LocaleService {
 
   formatInteger(value: number, locale: Locale): string {
     if (locale) {
-      return this._formatNumber(value, 0, locale.decimalSeparator, locale.groupSeparator);
+      return _formatNumber(value, 0, locale.decimalSeparator, locale.groupSeparator);
     } else {
-      return this._formatNumber(value, 0, '.', ',');
+      return _formatNumber(value, 0, '.', ',');
     }
   }
 
   formatNumber(value: number, scale: number, locale: Locale): string {
     if (locale) {
-      return this._formatNumber(value, scale, locale.decimalSeparator, locale.groupSeparator);
+      return _formatNumber(value, scale, locale.decimalSeparator, locale.groupSeparator);
     } else {
-      return this._formatNumber(value, scale, '.', ',');
+      return _formatNumber(value, scale, '.', ',');
     }
   }
 
   format(v: number, format: string, locale: Locale): string {
-    let f = this._format(v, format);
+    let f = _format(v, format);
     if (locale) {
       if (locale.decimalSeparator !== '.') {
         f = f.replace('.', '|');
-        f = f.replace(this._r3, locale.groupSeparator);
+        f = f.replace(r3, locale.groupSeparator);
         f = f.replace('|', locale.decimalSeparator);
       } else if (locale.groupSeparator !== ',') {
-        f = f.replace(this._r3, locale.groupSeparator);
+        f = f.replace(r3, locale.groupSeparator);
       }
       return f;
     } else {
       return f;
     }
   }
-
-  private padRight(str: string, length: number, pad: string): string {
-    if (!str) {
-      return str;
-    }
-    if (typeof str !== 'string') {
-      str = '' + str;
-    }
-    if (str.length >= length) {
-      return str;
-    }
-    let str2 = str;
-    if (!pad) {
-      pad = ' ';
-    }
-    while (str2.length < length) {
-      str2 = str2 + pad;
-    }
-    return str2;
+}
+export function parseNumber(value: string, locale?: Locale, scale?: number): number {
+  if (!locale) {
+    locale = this.getLocale('en-US');
   }
-  private round(v: number, scale: number = null): number {
-    return (scale ? parseFloat(v.toFixed(scale)) : v);
-  }
-  private _formatNumber(value: number, scale: number, decimalSeparator: string, groupSeparator: string): string {
-    if (!value) {
-      return '';
-    }
-    if (!groupSeparator && !decimalSeparator) {
-      groupSeparator = ',';
-      decimalSeparator = '.';
-    }
-    const s = (scale === 0 || scale ? value.toFixed(scale) : value.toString());
-    const x = s.split('.', 2);
-    const y = x[0];
-    const arr = [];
-    const len = y.length - 1;
-    for (let k = 0; k < len; k++) {
-      arr.push(y[len - k]);
-      if ((k + 1) % 3 === 0) {
-        arr.push(groupSeparator);
-      }
-    }
-    arr.push(y[0]);
-    if (x.length === 1) {
-      return arr.reverse().join('');
+  if (locale.decimalSeparator === '.') {
+    const n2: any = value.replace(r1, '');
+    if (isNaN(n2)) {
+      return null;
     } else {
-      return arr.reverse().join('') + decimalSeparator + x[1];
+      return round(n2, scale);
+    }
+  } else {
+    const n1 = value.replace(r2, '');
+    const n2: any = n1.replace(locale.groupSeparator, '.');
+    if (isNaN(n2)) {
+      return null;
+    } else {
+      return round(n2, scale);
     }
   }
-  /* tslint:disable */
-  private _format(a: any, b: any): string {
-    let j: any, e: any, h: any, c: any;
-    a = a + '';
-    if (a == 0 || a == '0') return '0';
-    if (!b || isNaN(+a)) return a;
-    a = b.charAt(0) == '-' ? -a : +a, j = a < 0 ? a = -a : 0, e = b.match(/[^\d\-\+#]/g), h = e &&
-      e[e.length - 1] || '.', e = e && e[1] && e[0] || ',', b = b.split(h), a = a.toFixed(b[1] && b[1].length),
-    a = +a + '', d = b[1] && b[1].lastIndexOf('0'), c = a.split('.');
-    if (!c[1] || c[1] && c[1].length <= d) a = (+a).toFixed(d + 1);
-    d = b[0].split(e); b[0] = d.join('');
-    let f = b[0] && b[0].indexOf('0');
-    if (f > -1) for (; c[0].length < b[0].length - f;) c[0] = '0' + c[0];
-    else +c[0] == 0 && (c[0] = '');
-    a = a.split('.'); a[0] = c[0];
-    if (c = d[1] && d[d.length - 1].length) {
-      f = '';
-      for (var d = a[0], k = d.length % c, g = 0, i = d.length; g < i; g++)
-        f += d.charAt(g), !((g - k + 1) % c) && g < i - c && (f += e);
-      a[0] = f;
-    } a[1] = b[1] && a[1] ? h + a[1] : '';
-    return (j ? '-' : '') + a[0] + a[1];
+}
+function padRight(str: string, length: number, pad: string): string {
+  if (!str) {
+    return str;
   }
+  if (typeof str !== 'string') {
+    str = '' + str;
+  }
+  if (str.length >= length) {
+    return str;
+  }
+  let str2 = str;
+  if (!pad) {
+    pad = ' ';
+  }
+  while (str2.length < length) {
+    str2 = str2 + pad;
+  }
+  return str2;
+}
+function round(v: number, scale?: number): number {
+  return (scale ? parseFloat(v.toFixed(scale)) : v);
+}
+function _formatNumber(v: number, n: number, d: string, g: string): string {
+  if (!v) {
+    return '';
+  }
+  if (!g && !d) {
+    g = ',';
+    d = '.';
+  }
+  const s = (n === 0 || n ? v.toFixed(n) : v.toString());
+  const x = s.split('.', 2);
+  const y = x[0];
+  const a = [];
+  const l = y.length - 1;
+  for (let k = 0; k < l; k++) {
+    a.push(y[l - k]);
+    if ((k + 1) % 3 === 0) {
+      a.push(g);
+    }
+  }
+  a.push(y[0]);
+  if (x.length === 1) {
+    return a.reverse().join('');
+  } else {
+    return a.reverse().join('') + d + x[1];
+  }
+}
+/* tslint:disable */
+function _format(a: any, b: any): string {
+  let j: any, e: any, h: any, c: any;
+  a = a + '';
+  if (a == 0 || a == '0') return '0';
+  if (!b || isNaN(+a)) return a;
+  a = b.charAt(0) == '-' ? -a : +a, j = a < 0 ? a = -a : 0, e = b.match(/[^\d\-\+#]/g), h = e &&
+    e[e.length - 1] || '.', e = e && e[1] && e[0] || ',', b = b.split(h), a = a.toFixed(b[1] && b[1].length),
+  a = +a + '', d = b[1] && b[1].lastIndexOf('0'), c = a.split('.');
+  if (!c[1] || c[1] && c[1].length <= d) a = (+a).toFixed(d + 1);
+  d = b[0].split(e); b[0] = d.join('');
+  let f = b[0] && b[0].indexOf('0');
+  if (f > -1) for (; c[0].length < b[0].length - f;) c[0] = '0' + c[0];
+  else +c[0] == 0 && (c[0] = '');
+  a = a.split('.'); a[0] = c[0];
+  if (c = d[1] && d[d.length - 1].length) {
+    f = '';
+    for (var d = a[0], k = d.length % c, g = 0, i = d.length; g < i; g++)
+      f += d.charAt(g), !((g - k + 1) % c) && g < i - c && (f += e);
+    a[0] = f;
+  } a[1] = b[1] && a[1] ? h + a[1] : '';
+  return (j ? '-' : '') + a[0] + a[1];
 }

@@ -21,7 +21,7 @@ function initCurrencyResources() {
     const x: CurrencyAlias = currencyResources[key];
     const currency: Currency = {
       currencyCode: key,
-      decimalDigits: (x.b?x.b:2),
+      decimalDigits: (x.b ? x.b : 2),
       currencySymbol: x.c
     };
     cr[key] = currency;
@@ -29,11 +29,11 @@ function initCurrencyResources() {
 }
 
 export interface CurrencyService {
-  getCurrency(currencyCode: string): Currency;
+  currency(currencyCode: string): Currency;
 }
 
 export class DefaultCurrencyService implements CurrencyService {
-  getCurrency(currencyCode: string): Currency {
+  currency(currencyCode: string): Currency {
     if (!currencyCode) {
       return null;
     }
