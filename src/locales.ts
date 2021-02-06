@@ -1,5 +1,5 @@
 // tslint:disable:quotemark
-export const localeResources: any = {
+export const locales: any = {
   "af-ZA": {
     "b": "ZA",
     "c": "yyyy/MM/dd",

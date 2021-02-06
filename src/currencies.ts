@@ -1,5 +1,5 @@
 // tslint:disable:quotemark
-export const currencyResources: any = {
+export const currencies: any = {
   "AED": {
     "c": "د.إ.‏"
   },
