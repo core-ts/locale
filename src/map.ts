@@ -1,4 +1,7 @@
-export const shortLocaleMap: any = {
+interface StringMap {
+  [key: string]: string;
+}
+export const map: StringMap = {
   'af': 'af-ZA',
   'am': 'am-ET',
   'ar': 'ar-AE',

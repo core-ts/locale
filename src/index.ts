@@ -37,7 +37,7 @@ export interface Locale {
   currencySample?: string;
 }
 
-function initLocaleResources() {
+function initLocaleResources(): void {
   const keys = Object.keys(locales);
   for (const key of keys) {
     const x: LocaleAlias = locales[key];
@@ -57,29 +57,28 @@ function initLocaleResources() {
     lr[key] = l;
   }
 }
-function getLocaleFromResources(i: string): Locale {
+function getLocaleFromResources(i: string): Locale|undefined {
   if (!initLocale) {
     initLocaleResources();
     initLocale = true;
   }
   return lr[i];
 }
-export function locale(l: string): Locale {
+export function locale(l: string): Locale|undefined {
   let lc = getLocaleFromResources(l);
   if (!lc) {
     const newId = map[l];
     if (!newId) {
-      return null;
+      return undefined;
     }
     lc = getLocaleFromResources(newId);
   }
   return lc;
 }
-export function id(lang: string): string {
+export function id(lang: string): string|undefined {
   const i = map[lang];
   return i;
 }
-
 
 let initCurrency = false;
 
@@ -100,7 +99,7 @@ export interface Currency {
   currencySymbol: string;
 }
 
-function initCurrencyResources() {
+function initCurrencyResources(): void {
   const keys = Object.keys(currencies);
   for (const key of keys) {
     const x: CurrencyAlias = currencies[key];
@@ -113,9 +112,9 @@ function initCurrencyResources() {
   }
 }
 
-export function currency(currencyCode: string): Currency {
+export function currency(currencyCode: string): Currency|undefined {
   if (!currencyCode) {
-    return null;
+    return undefined;
   }
   const code = currencyCode.toUpperCase();
   if (!initCurrency) {
