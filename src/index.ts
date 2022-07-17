@@ -44,14 +44,14 @@ function initLocaleResources(): void {
     const l: Locale = {
       id: x.a,
       countryCode: x.b,
-      dateFormat: (x.c ? x.c : 'dd/MM/yyyy'),
-      firstDayOfWeek: (x.d ? x.d : 2),
-      decimalSeparator: (x.e ? x.e : '.'),
-      groupSeparator: (x.f ? x.f : ','),
-      decimalDigits: (x.g ? x.g : 2),
-      currencyCode: (x.h ? x.h : 'EUR'),
-      currencySymbol: (x.i ? x.i : '€'),
-      currencyPattern: (x.j ? x.j : 2),
+      dateFormat: (x.c !== undefined ? x.c : 'dd/MM/yyyy'),
+      firstDayOfWeek: (x.d !== undefined ? x.d : 2),
+      decimalSeparator: (x.e !== undefined ? x.e : '.'),
+      groupSeparator: (x.f !== undefined ? x.f : ','),
+      decimalDigits: (x.g !== undefined ? x.g : 2),
+      currencyCode: (x.h !== undefined ? x.h : 'EUR'),
+      currencySymbol: (x.i !== undefined ? x.i : '€'),
+      currencyPattern: (x.j !== undefined ? x.j : 2),
       currencySample: x.k
     };
     lr[key] = l;
@@ -105,7 +105,7 @@ function initCurrencyResources(): void {
     const x: CurrencyAlias = currencies[key];
     const c: Currency = {
       currencyCode: key,
-      decimalDigits: (x.b ? x.b : 2),
+      decimalDigits: (x.b !== undefined ? x.b : 2),
       currencySymbol: x.c
     };
     cr[key] = c;
