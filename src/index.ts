@@ -94,9 +94,9 @@ interface CurrencyAlias {
 }
 
 export interface Currency {
-  currencyCode?: string;
+  code?: string;
   decimalDigits: number;
-  currencySymbol: string;
+  symbol: string;
 }
 
 function initCurrencyResources(): void {
@@ -104,9 +104,9 @@ function initCurrencyResources(): void {
   for (const key of keys) {
     const x: CurrencyAlias = currencies[key];
     const c: Currency = {
-      currencyCode: key,
+      code: key,
       decimalDigits: (x.b !== undefined ? x.b : 2),
-      currencySymbol: x.c
+      symbol: x.c
     };
     cr[key] = c;
   }
