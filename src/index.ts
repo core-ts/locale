@@ -24,7 +24,7 @@ interface LocaleAlias {
 }
 
 export interface Locale {
-  id?: string;
+  id: string;
   countryCode: string;
   dateFormat: string;
   firstDayOfWeek: number;
@@ -42,7 +42,7 @@ function initLocaleResources(): void {
   for (const key of keys) {
     const x: LocaleAlias = locales[key];
     const l: Locale = {
-      id: x.a,
+      id: key,
       countryCode: x.b,
       dateFormat: (x.c !== undefined ? x.c : 'dd/MM/yyyy'),
       firstDayOfWeek: (x.d !== undefined ? x.d : 2),
@@ -94,7 +94,7 @@ interface CurrencyAlias {
 }
 
 export interface Currency {
-  code?: string;
+  code: string;
   decimalDigits: number;
   symbol: string;
 }
