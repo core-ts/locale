@@ -595,6 +595,7 @@ export const locales: any = {
     "c": "MM/dd/yyyy",
     "d": 7,
     "e": "٫",
+    "f": "٬",
     "h": "IRR",
     "i": "ريال"
   },
