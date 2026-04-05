@@ -1,6 +1,6 @@
-import {currencies} from './currencies';
-import {locales} from './locales';
-import {map} from './map';
+import { currencies } from './currencies';
+import { locales } from './locales';
+import { map } from './map';
 
 let initLocale = false;
 
@@ -64,7 +64,7 @@ function getLocaleFromResources(i: string): Locale|undefined {
   }
   return lr[i];
 }
-export function locale(l: string): Locale|undefined {
+export function getLocale(l: string): Locale|undefined {
   let lc = getLocaleFromResources(l);
   if (!lc) {
     const newId = map[l];
@@ -75,7 +75,7 @@ export function locale(l: string): Locale|undefined {
   }
   return lc;
 }
-export function id(lang: string): string|undefined {
+export function getLocaleId(lang: string): string|undefined {
   const i = map[lang];
   return i;
 }
@@ -112,7 +112,7 @@ function initCurrencyResources(): void {
   }
 }
 
-export function currency(currencyCode: string): Currency|undefined {
+export function getCurrency(currencyCode: string): Currency|undefined {
   if (!currencyCode) {
     return undefined;
   }
@@ -123,4 +123,23 @@ export function currency(currencyCode: string): Currency|undefined {
   }
   const c = cr[code];
   return c;
+}
+
+export const enLocale: Locale = {
+  id: "en-US",
+  countryCode: "US",
+  dateFormat: "M/d/yyyy",
+  firstDayOfWeek: 1,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 2,
+  currencyCode: "USD",
+  currencySymbol: "$",
+  currencyPattern: 0,
+}
+
+export const usd: Currency = {
+  code: "USD",
+  symbol: "$",
+  decimalDigits: 2
 }
