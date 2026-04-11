@@ -143,3 +143,27 @@ export const usd: Currency = {
   symbol: "$",
   decimalDigits: 2
 }
+
+// tslint:disable-next-line:class-name
+export class resources {
+  static defaultLocale = enLocale
+  static defaultCurrency = usd
+}
+
+export function getDateFormat(lang: string): string {
+  const locale = getLocale(lang)
+  if (locale) {
+    return locale.dateFormat
+  }
+  return resources.defaultLocale.dateFormat
+}
+export function getCurrencyDecimalDigits(currencyCode?: string): number {
+  if (!currencyCode) {
+    return resources.defaultCurrency.decimalDigits
+  }
+  const currency = getCurrency(currencyCode)
+  if (currency) {
+    return currency.decimalDigits
+  }
+  return resources.defaultCurrency.decimalDigits
+}
