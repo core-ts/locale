@@ -125,18 +125,10 @@ export function getCurrency(currencyCode: string): Currency|undefined {
   return c;
 }
 
-export const enLocale: Locale = {
-  id: "en-US",
-  countryCode: "US",
-  dateFormat: "M/d/yyyy",
-  firstDayOfWeek: 1,
-  decimalSeparator: ".",
-  groupSeparator: ",",
-  decimalDigits: 2,
-  currencyCode: "USD",
-  currencySymbol: "$",
-  currencyPattern: 0,
-}
+export const vi = {"id":"vi-VN","countryCode":"VN","dateFormat":"dd/MM/yyyy","firstDayOfWeek":2,"decimalSeparator":",","groupSeparator":".","decimalDigits":0,"currencyCode":"VND","currencySymbol":"₫","currencyPattern":3}
+export const us = {"id":"en-US","countryCode":"US","dateFormat":"M/d/yyyy","firstDayOfWeek":1,"decimalSeparator":".","groupSeparator":",","decimalDigits":2,"currencyCode":"USD","currencySymbol":"$","currencyPattern":0}
+export const th = {"id":"th-TH","countryCode":"TH","dateFormat":"d/M/yyyy","firstDayOfWeek":2,"decimalSeparator":".","groupSeparator":",","decimalDigits":2,"currencyCode":"THB","currencySymbol":"฿","currencyPattern":0}
+export const id = {"id":"id-ID","countryCode":"ID","dateFormat":"dd/MM/yyyy","firstDayOfWeek":2,"decimalSeparator":",","groupSeparator":".","decimalDigits":0,"currencyCode":"IDR","currencySymbol":"Rp","currencyPattern":0}
 
 export const usd: Currency = {
   code: "USD",
@@ -146,7 +138,7 @@ export const usd: Currency = {
 
 // tslint:disable-next-line:class-name
 export class resources {
-  static defaultLocale = enLocale
+  static defaultLocale = us
   static defaultCurrency = usd
 }
 
