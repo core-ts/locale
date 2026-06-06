@@ -130,6 +130,11 @@ export const us = {"id":"en-US","countryCode":"US","dateFormat":"M/d/yyyy","firs
 export const th = {"id":"th-TH","countryCode":"TH","dateFormat":"d/M/yyyy","firstDayOfWeek":2,"decimalSeparator":".","groupSeparator":",","decimalDigits":2,"currencyCode":"THB","currencySymbol":"฿","currencyPattern":0}
 export const id = {"id":"id-ID","countryCode":"ID","dateFormat":"dd/MM/yyyy","firstDayOfWeek":2,"decimalSeparator":",","groupSeparator":".","decimalDigits":0,"currencyCode":"IDR","currencySymbol":"Rp","currencyPattern":0}
 
+export const viLocale = vi
+export const usLocale = us
+export const thLocale = th
+export const idLocale = id
+
 export const usd: Currency = {
   code: "USD",
   symbol: "$",
