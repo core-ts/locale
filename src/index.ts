@@ -64,7 +64,10 @@ function getLocaleFromResources(i: string): Locale|undefined {
   }
   return lr[i];
 }
-export function getLocale(l: string): Locale|undefined {
+export function getLocale(l?: string | null): Locale|undefined {
+  if (!l) {
+    return undefined;
+  }
   let lc = getLocaleFromResources(l);
   if (!lc) {
     const newId = map[l];
