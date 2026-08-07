@@ -2,6 +2,8 @@
 
 A lightweight, framework-agnostic localization library for TypeScript.
 
+A lightweight localization service that provides 103 languages, 210 locales, and 103 currencies for both frontend and backend applications.
+
 `locale-service` provides locale metadata, currency information, and formatting utilities that work consistently across both **backend** and **frontend** applications.
 
 It is designed for:
@@ -19,7 +21,7 @@ Unlike runtime-dependent localization APIs, `locale-service` ships with a built-
 
 # Features
 
-- 💰 103 built-in currency database (ISO 4217)
+- 💰 103 built-in currencies (ISO 4217)
 - 🗣 103 supported languages
 - 🌍 210 built-in locales
   - 💵 Locale-aware currency formatting
