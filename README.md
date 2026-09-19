@@ -19,7 +19,7 @@ Unlike runtime-dependent localization APIs, `locale-service` ships with a built-
 
 ---
 
-# Features
+## Features
 
 - 💰 103 built-in currencies (ISO 4217)
 - 🗣 103 supported languages
@@ -37,7 +37,7 @@ Unlike runtime-dependent localization APIs, `locale-service` ships with a built-
 
 ---
 
-# Installation
+## Installation
 
 ```bash
 npm install locale-service
@@ -51,7 +51,7 @@ yarn add locale-service
 
 ---
 
-# Why locale-service?
+## Why locale-service?
 
 Many applications need much more than formatting numbers and dates.
 
@@ -71,7 +71,7 @@ For example:
 
 ---
 
-# Lookup Locale
+## Lookup Locale
 
 Retrieve locale information using a locale code.
 
@@ -126,7 +126,7 @@ This is especially useful for:
 
 ---
 
-# Locale Information
+## Locale Information
 
 Each locale contains everything required for localization.
 
@@ -164,7 +164,7 @@ const locale = getLocale("en-US")
 
 ---
 
-# Currency Information
+## Currency Information
 
 Retrieve currency information independently.
 
@@ -182,14 +182,14 @@ interface Currency {
 
 ---
 
-# Currency Formatting
+## Currency Formatting
 
 Different countries display currencies differently.
 
 For example, the amount `10000` becomes
 
 | Locale | Output |
-|---------|----------------|
+|--------|--------|
 | en-US | `$10,000.00` |
 | km-KH | `10,000.00៛` |
 | nb-NO | `kr 10 000,00` |
@@ -198,7 +198,7 @@ For example, the amount `10000` becomes
 To support these differences efficiently, `locale-service` defines four currency patterns.
 
 | Pattern | Description | Example |
-|----------|-------------|---------|
+|---------|-------------|---------|
 | 0 | Prefix | `$10,000.00` |
 | 1 | Suffix | `10,000.00៛` |
 | 2 | Prefix with space | `kr 10 000,00` |
@@ -208,7 +208,7 @@ This simple model covers the vast majority of currency formatting conventions wh
 
 ---
 
-# Designed for Full-Stack Applications
+## Designed for Full-Stack Applications
 
 The same locale database is shared across frontend and backend.
 
@@ -229,7 +229,7 @@ No inconsistent formatting.
 
 ---
 
-# Performance
+## Performance
 
 The library stores locale and currency information using `Map`.
 
@@ -242,7 +242,7 @@ Both operations execute in **O(1)** time.
 
 ---
 
-# Typical Use Cases
+## Typical Use Cases
 
 `locale-service` is suitable for:
 
@@ -261,7 +261,7 @@ Both operations execute in **O(1)** time.
 
 ---
 
-# Design Goals
+## Design Goals
 
 - Framework independent
 - Backend and frontend compatible
@@ -274,6 +274,457 @@ Both operations execute in **O(1)** time.
 
 ---
 
-# License
+## Currency list
+
+| Code | Symbol | Decimal Digits |
+|------|--------|----------------|
+|AED|د.إ|2|
+|AFN|؋|2|
+|ALL|Lek|2|
+|AMD|դր.|2|
+|ARS|$|2|
+|AUD|$|2|
+|AZN|ман.|2|
+|BAM|KM|2|
+|BDT|৳|2|
+|BGN|лв.|2|
+|BHD|BD|3|
+|BND|$|0|
+|BOB|$b|2|
+|BRL|R$|2|
+|BYR|р.|2|
+|BZD|BZ$|2|
+|CAD|$|2|
+|CHF|Fr.|2|
+|CLP|$|2|
+|CNY|¥|2|
+|COP|$|2|
+|CRC|₡|2|
+|CSD|Дин.|2|
+|CZK|Kč|2|
+|DKK|kr.|2|
+|DOP|RD$|2|
+|DZD|DA|2|
+|EEK|kr|2|
+|EGP|£|2|
+|ETB|Br|2|
+|EUR|€|2|
+|GBP|£|2|
+|GEL|Lari|2|
+|GTQ|Q|2|
+|HKD|HK$|2|
+|HNL|L.|2|
+|HRK|kn|2|
+|HUF|Ft|2|
+|IDR|Rp|0|
+|ILS|₪|2|
+|INR|₹|2|
+|IQD|ID|2|
+|IRR|ريال|2|
+|ISK|kr.|0|
+|JMD|J$|2|
+|JOD|د.أ|3|
+|JPY|¥|0|
+|KES|S|2|
+|KGS|сом|2|
+|KHR|៛|2|
+|KRW|₩|0|
+|KWD|KD|3|
+|KZT|Т|2|
+|LAK|₭|2|
+|LBP|LL|2|
+|LKR|රු.|2|
+|LTL|Lt|2|
+|LVL|Ls|2|
+|LYD|LD|3|
+|MAD|DH|2|
+|MKD|ден.|2|
+|MNT|₮|2|
+|MOP|$|2|
+|MVR|ރ.|2|
+|MXN|$|2|
+|MYR|RM|2|
+|NIO|C$|2|
+|NOK|kr|2|
+|NPR|रु|2|
+|NZD|$|2|
+|OMR|R.O|3|
+|PAB|B/.|2|
+|PEN|S/.|2|
+|PHP|₱|2|
+|PKR|Rs|2|
+|PLN|zł|2|
+|PYG|Gs|2|
+|QAR|QR|2|
+|RON|lei|2|
+|RSD|Дин.|2|
+|RUB|һ.|2|
+|RWF|R₣|2|
+|SAR|SR|2|
+|SEK|kr|2|
+|SGD|$|2|
+|SYP|LS|2|
+|THB|฿|2|
+|TJS|т.р.|2|
+|TMT|m.|2|
+|TND|DT|3|
+|TRY|TL|2|
+|TTD|TT$|2|
+|TWD|NT$|2|
+|UAH|₴|2|
+|USD|$|2|
+|UYU|$U|2|
+|UZS|лв|2|
+|VEF|Bs.|2|
+|VND|₫|0|
+|XOF|XOF|2|
+|YER|﷼|2|
+|ZAR|R|2|
+|ZWL|Z$|2|
+
+## Locale list
+
+| Code | Country Code | Date Format | First Day Of Week | Decimal Separator | Group Separator | Currency Code | Currency Symbol | Currency Decimal Digits | Currency Pattern | Currency Sample | 
+|------|--------------|-------------|-------------------|-------------------|-----------------|---------------|-----------------|-------------------------|------------------|-----------------|
+|af-ZA|ZA|yyyy/MM/dd|1|.|,|ZAR|R|2| 2 |R 10,000.00|
+|am-ET|ET|d/M/yyyy|1|.|,|ETB|Br|2| 0 |ETB10,000.00|
+|ar-AE|AE|dd/MM/yyyy|7|.|,|AED|د.إ|2| 2 |د.إ.‏ 10,000.00|
+|ar-BH|BH|dd/MM/yyyy|7|.|,|BHD|BD|3| 2 |د.ب.‏ 10,000.000|
+|ar-DZ|DZ|dd-MM-yyyy|7|.|,|DZD|DA|2| 2 |د.ج.‏ 10,000.00|
+|ar-EG|EG|dd/MM/yyyy|7|.|,|EGP|£|2| 2 |ج.م.‏ 10,000.00|
+|ar-IQ|IQ|dd/MM/yyyy|7|.|,|IQD|ID|2| 2 |د.ع.‏ 10,000.00|
+|ar-JO|JO|dd/MM/yyyy|7|.|,|JOD|د.أ|3| 2 |د.ا.‏ 10,000.000|
+|ar-KW|KW|dd/MM/yyyy|7|.|,|KWD|KD|3| 2 |د.ك.‏ 10,000.000|
+|ar-LB|LB|dd/MM/yyyy|2|.|,|LBP|LL|2| 2 |ل.ل.‏ 10,000.00|
+|ar-LY|LY|dd/MM/yyyy|7|.|,|LYD|LD|3| 0 |د.ل.‏10,000.000|
+|ar-MA|MA|dd-MM-yyyy|2|.|,|MAD|DH|2| 2 |د.م.‏ 10,000.00|
+|ar-OM|OM|dd/MM/yyyy|7|.|,|OMR|R.O|3| 2 |ر.ع.‏ 10,000.000|
+|ar-QA|QA|dd/MM/yyyy|7|.|,|QAR|QR|2| 2 |ر.ق.‏ 10,000.00|
+|ar-SA|SA|dd/MM/yy|7|.|,|SAR|SR|2| 2 |ر.س.‏ 10,000.00|
+|ar-SY|SY|dd/MM/yyyy|7|.|,|SYP|LS|2| 2 |ل.س.‏ 10,000.00|
+|ar-TN|TN|dd-MM-yyyy|2|.|,|TND|DT|3| 2 |د.ت.‏ 10,000.000|
+|ar-YE|YE|dd/MM/yyyy|7|.|,|YER|﷼|2| 2 |ر.ي.‏ 10,000.00|
+|arn-CL|CL|dd-MM-yyyy|1|,|.|CLP|$|2| 2 |$ 10.000,00|
+|as-IN|IN|dd-MM-yyyy|2|.|,|INR|₹|2| 1 |10,000.00ট|
+|az-Cyrl-AZ|AZ|dd.MM.yyyy|2|,| |AZN|ман.|2| 3 |10 000,00 ман.|
+|az-Latn-AZ|AZ|dd.MM.yyyy|2|,| |AZN|ман.|2| 3 |10 000,00 man.|
+|ba-RU|RU|dd.MM.yy|2|,| |RUB|һ.|2| 3 |10 000,00 һ.|
+|be-BY|BY|dd.MM.yyyy|2|,| |BYR|р.|2| 3 |10 000,00 р.|
+|bg-BG|BG|d.M.yyyy 'г.'|2|,| |BGN|лв.|2| 3 |10 000,00 лв.|
+|bn-BD|BD|dd-MM-yy|2|.|,|BDT|৳|2| 2 |৳ 10,000.00|
+|bn-IN|IN|dd-MM-yy|2|.|,|INR|₹|2| 2 |টা 10,000.00|
+|bo-CN|CN|yyyy/M/d|2|.|,|CNY|¥|2| 0 |¥10,000.00|
+|br-FR|FR|dd/MM/yyyy|2|,| |EUR|€|2| 3 |10 000,00 €|
+|bs-Cyrl-BA|BA|d.M.yyyy|2|,|.|BAM|KM|2| 3 |10.000,00 КМ|
+|bs-Latn-BA|BA|d.M.yyyy|2|,|.|BAM|KM|2| 3 |10.000,00 KM|
+|ca-ES|ES|dd/MM/yyyy|2|,|.|EUR|€|2| 3 |10.000,00 €|
+|co-FR|FR|dd/MM/yyyy|2|,| |EUR|€|2| 3 |10 000,00 €|
+|cs-CZ|CZ|d.M.yyyy|2|,| |CZK|Kč|2| 3 |10 000,00 Kč|
+|cy-GB|GB|dd/MM/yyyy|2|.|,|GBP|£|2| 0 |£10,000.00|
+|da-DK|DK|dd-MM-yyyy|2|,|.|DKK|kr.|2| 2 |kr. 10.000,00|
+|de-AT|AT|dd.MM.yyyy|2|,|.|EUR|€|2| 2 |€ 10.000,00|
+|de-CH|CH|dd.MM.yyyy|2|.|'|CHF|Fr.|2| 2 |Fr. 10'000.00|
+|de-DE|DE|dd.MM.yyyy|2|,|.|EUR|€|2| 3 |10.000,00 €|
+|de-LI|LI|dd.MM.yyyy|2|.|'|CHF|Fr.|2| 2 |CHF 10'000.00|
+|de-LU|LU|dd.MM.yyyy|2|,|.|EUR|€|2| 3 |10.000,00 €|
+|dsb-DE|DE|d. M. yyyy|2|,|.|EUR|€|2| 3 |10.000,00 €|
+|dv-MV|MV|dd/MM/yy|1|.|,|MVR|ރ.|2| 3 |10,000.00 ރ.|
+|el-GR|GR|d/M/yyyy|2|,|.|EUR|€|2| 3 |10.000,00 €|
+|en-029|29|MM/dd/yyyy|2|.|,|USD|$|2| 0 |$10,000.00|
+|en-AU|AU|d/MM/yyyy|2|.|,|AUD|$|2| 0 |$10,000.00|
+|en-BZ|BZ|dd/MM/yyyy|1|.|,|BZD|BZ$|2| 0 |BZ$10,000.00|
+|en-CA|CA|dd/MM/yyyy|1|.|,|CAD|$|2| 0 |$10,000.00|
+|en-GB|GB|dd/MM/yyyy|2|.|,|GBP|£|2| 0 |£10,000.00|
+|en-IE|IE|dd/MM/yyyy|2|.|,|EUR|€|2| 0 |€ 10,000.00|
+|en-IN|IN|dd-MM-yyyy|2|.|,|INR|₹|2| 2 |Rs. 10,000.00|
+|en-JM|JM|dd/MM/yyyy|1|.|,|JMD|J$|2| 0 |J$10,000.00|
+|en-MY|MY|d/M/yyyy|1|.|,|MYR|RM|2| 0 |RM10,000.00|
+|en-NZ|NZ|d/MM/yyyy|2|.|,|NZD|$|2| 0 |$10,000.00|
+|en-PH|PH|M/d/yyyy|1|.|,|PHP|₱|2| 0 |Php10,000.00|
+|en-SG|SG|d/M/yyyy|1|.|,|SGD|$|2| 0 |$10,000.00|
+|en-TT|TT|dd/MM/yyyy|1|.|,|TTD|TT$|2| 0 |TT$10,000.00|
+|en-US|US|M/d/yyyy|1|.|,|USD|$|2| 0 |$10,000.00|
+|en-ZA|ZA|yyyy/MM/dd|1|,| |ZAR|R|2| 2 |R 10 000.00|
+|en-ZW|ZW|M/d/yyyy|1|.|,|ZWL|Z$|2| 0 |Z$10,000.00|
+|es-AR|AR|dd/MM/yyyy|1|,|.|ARS|$|2| 2 |$ 10.000,00|
+|es-BO|BO|dd/MM/yyyy|1|,|.|BOB|$b|2| 2 |$b 10.000,00|
+|es-CL|CL|dd-MM-yyyy|1|,|.|CLP|$|2| 2 |$ 10.000,00|
+|es-CO|CO|dd/MM/yyyy|1|,|.|COP|$|2| 2 |$ 10.000,00|
+|es-CR|CR|dd/MM/yyyy|1|,|.|CRC|₡|2| 0 |₡10.000,00|
+|es-DO|DO|dd/MM/yyyy|1|.|,|DOP|RD$|2| 0 |RD$10,000.00|
+|es-EC|EC|dd/MM/yyyy|1|,|.|USD|$|2| 2 |$ 10.000,00|
+|es-ES|ES|dd/MM/yyyy|2|,|.|EUR|€|2| 3 |10.000,00 €|
+|es-GT|GT|dd/MM/yyyy|1|.|,|GTQ|Q|2| 0 |Q10,000.00|
+|es-HN|HN|dd/MM/yyyy|1|.|,|HNL|L.|2| 2 |L. 10,000.00|
+|es-MX|MX|dd/MM/yyyy|1|.|,|MXN|$|2| 0 |$10,000.00|
+|es-NI|NI|dd/MM/yyyy|1|.|,|NIO|C$|2| 2 |C$ 10,000.00|
+|es-PA|PA|MM/dd/yyyy|1|.|,|PAB|B/.|2| 2 |B/. 10,000.00|
+|es-PE|PE|dd/MM/yyyy|1|.|,|PEN|S/.|2| 2 |S/. 10,000.00|
+|es-PR|PR|dd/MM/yyyy|1|.|,|USD|$|2| 2 |$10,000.00|
+|es-PY|PY|dd/MM/yyyy|2|,|.|PYG|Gs|2| 2 |Gs 10.000,00|
+|es-SV|SV|dd/MM/yyyy|1|.|,|USD|$|2| 0 |$10,000.00|
+|es-US|US|M/d/yyyy|1|.|,|USD|$|2| 0 |$10,000.00|
+|es-UY|UY|dd/MM/yyyy|2|,|.|UYU|$U|2| 2 |$U 10.000,00|
+|es-VE|VE|dd/MM/yyyy|1|,|.|VEF|Bs.|2| 2 |Bs. F. 10.000,00|
+|et-EE|EE|d.MM.yyyy|2|.| |EEK|kr|2| 3 |10 000,00 kr|
+|eu-ES|ES|yyyy/MM/dd|2|,|.|EUR|€|2| 3 |10.000,00 €|
+|fa-IR|IR|MM/dd/yyyy|7|٫|٬|IRR|ريال|2| 2 |ريال 10,000.00|
+|fi-FI|FI|d.M.yyyy|2|,| |EUR|€|2| 3 |10 000,00 €|
+|fil-PH|PH|M/d/yyyy|1|.|,|PHP|₱|2| 0 |PhP10,000.00|
+|fo-FO|FO|dd-MM-yyyy|2|,|.|DKK|kr.|2| 2 |kr. 10.000,00|
+|fr-BE|BE|d/MM/yyyy|2|,|.|EUR|€|2| 2 |€ 10.000,00|
+|fr-CA|CA|yyyy-MM-dd|1|,| |CAD|$|2| 3 |10 000,00 $|
+|fr-CH|CH|dd.MM.yyyy|2|.|'|CHF|Fr.|2| 2 |fr. 10'000.00|
+|fr-FR|FR|dd/MM/yyyy|2|,| |EUR|€|2| 3 |10 000,00 €|
+|fr-LU|LU|dd/MM/yyyy|2|,| |EUR|€|2| 3 |10 000,00 €|
+|fr-MC|MC|dd/MM/yyyy|2|,| |EUR|€|2| 3 |10 000,00 €|
+|fy-NL|NL|d-M-yyyy|2|,|.|EUR|€|2| 2 |€ 10.000,00|
+|ga-IE|IE|dd/MM/yyyy|2|.|,|EUR|€|2| 0 |€ 10,000.00|
+|gd-GB|GB|dd/MM/yyyy|2|.|,|GBP|£|2| 0 |£10,000.00|
+|gl-ES|ES|dd/MM/yyyy|2|,|.|EUR|€|2| 3 |10.000,00 €|
+|gsw-FR|FR|dd/MM/yyyy|2|,| |EUR|€|2| 3 |10 000,00 €|
+|gu-IN|IN|dd-MM-yy|2|.|,|INR|₹|2| 2 |રૂ 10,000.00|
+|ha-Latn-NG|NG|d/M/yyyy|1|.|,|NIO|C$|2| 2 |N 10,000.00|
+|he-IL|IL|dd/MM/yyyy|1|.|,|ILS|₪|2| 2 |₪ 10,000.00|
+|hi-IN|IN|dd-MM-yyyy|2|.|,|INR|₹|2| 2 |रु 10,000.00|
+|hr-BA|BA|d.M.yyyy|2|,|.|BAM|KM|2| 3 |10.000,00 KM|
+|hr-HR|HR|d.M.yyyy.|2|,|.|HRK|kn|2| 3 |10.000,00 kn|
+|hsb-DE|DE|d. M. yyyy|2|,|.|EUR|€|2| 3 |10.000,00 €|
+|hu-HU|HU|yyyy.MM.dd.|2|,| |HUF|Ft|2| 3 |10 000,00 Ft|
+|hy-AM|AM|dd.MM.yyyy|2|.|,|AMD|դր.|2| 3 |10,000.00 դր.|
+|id-ID|ID|dd/MM/yyyy|2|,|.|IDR|Rp|0| 0 |Rp10.000|
+|ig-NG|NG|d/M/yyyy|1|.|,|NIO|C$|2| 2 |N 10,000.00|
+|ii-CN|CN|yyyy/M/d|2|.|,|CNY|¥|2| 0 |¥10,000.00|
+|is-IS|IS|d.M.yyyy|2|,|.|ISK|kr.|0| 3 |10.000 kr.|
+|it-CH|CH|dd.MM.yyyy|2|.|'|CHF|Fr.|2| 2 |fr. 10'000.00|
+|it-IT|IT|dd/MM/yyyy|2|,|.|EUR|€|2| 2 |€ 10.000,00|
+|iu-Cans-CA|CA|d/M/yyyy|1|.|,|CAD|$|2| 0 |$10,000.00|
+|iu-Latn-CA|CA|d/MM/yyyy|1|.|,|CAD|$|2| 0 |$10,000.00|
+|ja-JP|JP|yyyy/MM/dd|1|.|,|JPY|¥|0| 0 |¥10,000|
+|ka-GE|GE|dd.MM.yyyy|2|,| |GEL|Lari|2| 3 |10 000,00 Lari|
+|kk-KZ|KZ|dd.MM.yyyy|2|,| |KZT|Т|2| 0 |Т10 000,00|
+|kl-GL|GL|dd-MM-yyyy|2|,|.|DKK|kr.|2| 2 |kr. 10.000,00|
+|km-KH|KH|yyyy-MM-dd|1|.|,|KHR|៛|2| 1 |10,000.00៛|
+|kn-IN|IN|dd-MM-yy|2|.|,|INR|₹|2| 2 |ರೂ 10,000.00|
+|ko-KR|KR|yyyy-MM-dd|1|.|,|KRW|₩|0| 0 |₩10,000|
+|kok-IN|IN|dd-MM-yyyy|2|.|,|INR|₹|2| 2 |रु 10,000.00|
+|ky-KG|KG|dd.MM.yy|2|,| |KGS|сом|2| 3 |10 000,00 сом|
+|lb-LU|LU|dd/MM/yyyy|2|,| |EUR|€|2| 3 |10 000,00 €|
+|lo-LA|LA|dd/MM/yyyy|1|.|,|LAK|₭|2| 1 |10,000.00₭|
+|lt-LT|LT|yyyy.MM.dd|2|,|.|LTL|Lt|2| 3 |10.000,00 Lt|
+|lv-LV|LV|yyyy.MM.dd.|2|,| |LVL|Ls|2| 2 |Ls 10 000,00|
+|mi-NZ|NZ|dd/MM/yyyy|2|.|,|NZD|$|2| 0 |$10,000.00|
+|mk-MK|MK|dd.MM.yyyy|2|,|.|MKD|ден.|2| 3 |10.000,00 ден.|
+|ml-IN|IN|dd-MM-yy|2|.|,|INR|₹|2| 2 |ക 10,000.00|
+|mn-MN|MN|yy.MM.dd|2|,| |MNT|₮|2| 1 |10 000,00₮|
+|mn-Mong-CN|CN|yyyy/M/d|2|.|,|CNY|¥|2| 0 |¥10,000.00|
+|moh-CA|CA|M/d/yyyy|1|.|,|CAD|$|2| 0 |$10,000.00|
+|mr-IN|IN|dd-MM-yyyy|2|.|,|INR|₹|2| 2 |रु 10,000.00|
+|ms-BN|BN|dd/MM/yyyy|2|,|.|BND|$|0| 0 |$10.00|
+|ms-MY|MY|dd/MM/yyyy|2|.|,|MYR|RM|2| 0 |RM10,000|
+|mt-MT|MT|dd/MM/yyyy|2|.|,|EUR|€|2| 0 |€ 10,000.00|
+|nb-NO|NO|dd.MM.yyyy|2|,| |NOK|kr|2| 2 |kr 10 000,00|
+|ne-NP|NP|M/d/yyyy|1|.|,|NPR|रु|2| 0 |रु10,000.00|
+|nl-BE|BE|d/MM/yyyy|2|,|.|EUR|€|2| 2 |€ 10.000,00|
+|nl-NL|NL|d-M-yyyy|2|,|.|EUR|€|2| 2 |€ 10.000,00|
+|nn-NO|NO|dd.MM.yyyy|2|,| |NOK|kr|2| 2 |kr 10 000,00|
+|nso-ZA|ZA|yyyy/MM/dd|1|.|,|ZAR|R|2| 2 |R 10,000.00|
+|oc-FR|FR|dd/MM/yyyy|2|,| |EUR|€|2| 3 |10 000,00 €|
+|or-IN|IN|dd-MM-yy|1|.|,|INR|₹|2| 2 |ଟ 10,000.00|
+|pa-IN|IN|dd-MM-yy|2|.|,|INR|₹|2| 2 |ਰੁ 10,000.00|
+|pl-PL|PL|yyyy-MM-dd|2|,| |PLN|zł|2| 3 |10 000,00 zł|
+|prs-AF|AF|dd/MM/yy|6|.|,|AFN|؋|2| 0 |؋10.000,00|
+|ps-AF|AF|dd/MM/yy|7|٫|٬|AFN|؋|2| 0 |؋10،000,00|
+|pt-BR|BR|dd/MM/yyyy|1|,|.|BRL|R$|2| 2 |R$ 10.000,00|
+|pt-PT|PT|dd-MM-yyyy|2|,|.|EUR|€|2| 3 |10.000,00 €|
+|qut-GT|GT|dd/MM/yyyy|1|.|,|GTQ|Q|2| 0 |Q10,000.00|
+|quz-BO|BO|dd/MM/yyyy|1|,|.|BOB|$b|2| 2 |$b 10.000,00|
+|quz-EC|EC|dd/MM/yyyy|1|,|.|USD|$|2| 2 |$ 10.000,00|
+|quz-PE|PE|dd/MM/yyyy|1|.|,|PEN|S/.|2| 2 |S/. 10,000.00|
+|rm-CH|CH|dd/MM/yyyy|2|.|'|CHF|Fr.|2| 2 |fr. 10'000.00|
+|ro-RO|RO|dd.MM.yyyy|2|,|.|RON|lei|2| 3 |10.000,00 lei|
+|ru-RU|RU|dd.MM.yyyy|2|,| |RUB|һ.|2| 1 |10 000,00р.|
+|rw-RW|RW|M/d/yyyy|1|,| |RWF|R₣|2| 2 |RWF 10 000,00|
+|sa-IN|IN|dd-MM-yyyy|1|.|,|INR|₹|2| 2 |रु 10,000.00|
+|sah-RU|RU|MM.dd.yyyy|2|,| |RUB|һ.|2| 1 |10 000,00с.|
+|se-FI|FI|d.M.yyyy|2|,| |EUR|€|2| 3 |10 000,00 €|
+|se-NO|NO|dd.MM.yyyy|2|,| |NOK|kr|2| 2 |kr 10 000,00|
+|se-SE|SE|yyyy-MM-dd|2|,|.|SEK|kr|2| 3 |10 000,00 kr|
+|si-LK|LK|yyyy-MM-dd|2|.|,|LKR|රු.|2| 2 |රු. 10,000.00|
+|sk-SK|SK|d. M. yyyy|2|,| |EUR|€|2| 3 |10 000,00 €|
+|sl-SI|SI|d.M.yyyy|2|,|.|EUR|€|2| 3 |10.000,00 €|
+|sma-NO|NO|dd.MM.yyyy|2|,| |NOK|kr|2| 2 |kr 10 000,00|
+|sma-SE|SE|yyyy-MM-dd|2|,|.|SEK|kr|2| 3 |10 000,00 kr|
+|smj-NO|NO|dd.MM.yyyy|2|,| |NOK|kr|2| 2 |kr 10 000,00|
+|smj-SE|SE|yyyy-MM-dd|2|,|.|SEK|kr|2| 3 |10 000,00 kr|
+|smn-FI|FI|d.M.yyyy|2|,| |EUR|€|2| 3 |10 000,00 €|
+|sms-FI|FI|d.M.yyyy|2|,| |EUR|€|2| 3 |10 000,00 €|
+|sq-AL|AL|yyyy-MM-dd|2|,|.|ALL|Lek|2| 1 |10.000,00Lek|
+|sr-Cyrl-BA|BA|d.M.yyyy|2|,|.|BAM|KM|2| 3 |10.000,00 КМ|
+|sr-Cyrl-CS|CS|d.M.yyyy|2|,|.|CSD|Дин.|2| 3 |10.000,00 Дин.|
+|sr-Cyrl-ME|ME|d.M.yyyy|2|,|.|EUR|€|2| 3 |10.000,00 €|
+|sr-Cyrl-RS|RS|d.M.yyyy|2|,|.|RSD|Дин.|2| 3 |10.000,00 Дин.|
+|sr-Latn-BA|BA|d.M.yyyy|2|,|.|BAM|KM|2| 3 |10.000,00 KM|
+|sr-Latn-CS|CS|d.M.yyyy|2|,|.|CSD|Дин.|2| 3 |10.000,00 Din.|
+|sr-Latn-ME|ME|d.M.yyyy|2|,|.|EUR|€|2| 3 |10.000,00 €|
+|sr-Latn-RS|RS|d.M.yyyy|2|,|.|RSD|Дин.|2| 3 |10.000,00 Din.|
+|sv-FI|FI|d.M.yyyy|2|,| |EUR|€|2| 3 |10 000,00 €|
+|sv-SE|SE|yyyy-MM-dd|2|,|.|SEK|kr|2| 3 |10 000,00 kr|
+|sw-KE|KE|M/d/yyyy|1|.|,|KES|S|2| 0 |S10,000.00|
+|syr-SY|SY|dd/MM/yyyy|7|.|,|SYP|LS|2| 2 |ل.س.‏ 10,000.00|
+|ta-IN|IN|dd-MM-yyyy|2|.|,|INR|₹|2| 2 |ரூ 10,000.00|
+|te-IN|IN|dd-MM-yy|2|.|,|INR|₹|2| 2 |రూ 10,000.00|
+|tg-Cyrl-TJ|TJ|dd.MM.yy|1|,| |TJS|т.р.|2| 3 |10 000,00 т.р.|
+|th-TH|TH|d/M/yyyy|2|.|,|THB|฿|2| 0 |฿10,000.00|
+|tk-TM|TM|dd.MM.yy|2|,| |TMT|m.|2| 1 |10 000,00m.|
+|tn-ZA|ZA|yyyy/MM/dd|1|.|,|ZAR|R|2| 2 |R 10,000.00|
+|tr-TR|TR|dd.MM.yyyy|2|,|.|TRY|TL|2| 3 |10.000,00 TL|
+|tt-RU|RU|dd.MM.yyyy|2|,| |RUB|һ.|2| 3 |10 000,00 р.|
+|tzm-Latn-DZ|DZ|dd-MM-yyyy|7|.|,|DZD|DA|2| 3 |10.000,00 DZD|
+|ug-CN|CN|yyyy-M-d|1|.|,|CNY|¥|2| 0 |¥10,000.00|
+|uk-UA|UA|dd.MM.yyyy|2|,| |UAH|₴|2| 1 |10 000,00₴|
+|ur-PK|PK|dd/MM/yyyy|2|.|,|PKR|Rs|2| 0 |Rs10,000.00|
+|uz-Cyrl-UZ|UZ|dd.MM.yyyy|2|,| |UZS|сўм|2| 3 |10 000,00 сўм|
+|uz-Latn-UZ|UZ|dd/MM yyyy|2|,| |UZS|лв|2| 3 |10 000 so'm|
+|vi-VN|VN|dd/MM/yyyy|2|,|.|VND|₫|0| 3 |10.000,00 ₫|
+|wo-SN|SN|dd/MM/yyyy|2|,| |XOF|XOF|2| 3 |10 000,00 XOF|
+|xh-ZA|ZA|yyyy/MM/dd|1|.|,|ZAR|R|2| 2 |R 10,000.00|
+|yo-NG|NG|d/M/yyyy|1|.|,|NIO|C$|2| 2 |N 10,000.00|
+|zh-CN|CN|yyyy/M/d|1|.|,|CNY|¥|2| 0 |¥10,000.00|
+|zh-HK|HK|d/M/yyyy|1|.|,|HKD|HK$|2| 0 |HK$10,000.00|
+|zh-MO|MO|d/M/yyyy|1|.|,|MOP|$|2| 0 |MOP10,000.00|
+|zh-SG|SG|d/M/yyyy|1|.|,|SGD|$|2| 0 |$10,000.00|
+|zh-TW|TW|yyyy/M/d|1|.|,|TWD|NT$|2| 0 |NT$10,000.00|
+|zu-ZA|ZA|yyyy/MM/dd|1|.|,|ZAR|R|2| 2 |R 10,000.00|
+
+## Language - Locale Map
+
+| Language Code | Locale Code |
+|---------------|-------------|
+|af|af-ZA|
+|am|am-ET|
+|ar|ar-AE|
+|arn|arn-CL|
+|as|as-IN|
+|az|az-Latn-AZ|
+|ba|ba-RU|
+|be|be-BY|
+|bg|bg-BG|
+|bn|bn-BD|
+|bo|bo-CN|
+|br|br-FR|
+|bs|bs-Latn-BA|
+|ca|ca-ES|
+|co|co-FR|
+|cs|cs-CZ|
+|cy|cy-GB|
+|da|da-DK|
+|de|de-DE|
+|dsb|dsb-DE|
+|dv|dv-MV|
+|el|el-GR|
+|en|en-US|
+|es|es-ES|
+|et|et-EE|
+|eu|eu-ES|
+|fa|fa-IR|
+|fi|fi-FI|
+|fil|fil-PH|
+|fo|fo-FO|
+|fr|fr-FR|
+|fy|fy-NL|
+|ga|ga-IE|
+|gd|gd-GB|
+|gl|gl-ES|
+|gsw|gsw-FR|
+|gu|gu-IN|
+|ha|ha-Latn-NG|
+|he|he-IL|
+|hi|hi-IN|
+|hr|hr-HR|
+|hsb|hsb-DE|
+|hu|hu-HU|
+|hy|hy-AM|
+|id|id-ID|
+|ig|ig-NG|
+|ii|ii-CN|
+|is|is-IS|
+|it|it-IT|
+|iu|iu-Latn-CA|
+|ja|ja-JP|
+|ka|ka-GE|
+|kk|kk-KZ|
+|kl|kl-GL|
+|km|km-KH|
+|kn|kn-IN|
+|ko|ko-KR|
+|kok|kok-IN|
+|ky|ky-KG|
+|lb|lb-LU|
+|lo|lo-LA|
+|lt|lt-LT|
+|lv|lv-LV|
+|mi|mi-NZ|
+|mk|mk-MK|
+|ml|ml-IN|
+|mn|mn-MN|
+|moh|moh-CA|
+|mr|mr-IN|
+|ms|ms-MY|
+|mt|mt-MT|
+|nb|nb-NO|
+|ne|ne-NP|
+|nl|nl-NL|
+|nn|nn-NO|
+|nso|nso-ZA|
+|oc|oc-FR|
+|or|or-IN|
+|pa|pa-IN|
+|pl|pl-PL|
+|prs|prs-AF|
+|ps|ps-AF|
+|pt|pt-PT|
+|qut|qut-GT|
+|quz|quz-EC|
+|rm|rm-CH|
+|ro|ro-RO|
+|ru|ru-RU|
+|rw|rw-RW|
+|sa|sa-IN|
+|sah|sah-RU|
+|se|se-SE|
+|si|si-LK|
+|sk|sk-SK|
+|sl|sl-SI|
+|sma|sma-SE|
+|smj|smj-SE|
+|smn|smn-FI|
+|sms|sms-FI|
+|sq|sq-AL|
+|sr|sr-Latn-RS|
+|sv|sv-SE|
+|sw|sw-KE|
+|syr|syr-SY|
+|ta|ta-IN|
+|te|te-IN|
+|tg|tg-Cyrl-TJ|
+|th|th-TH|
+|tk|tk-TM|
+|tn|tn-ZA|
+|tr|tr-TR|
+|tt|tt-RU|
+|tzm|tzm-Latn-DZ|
+|ug|ug-CN|
+|uk|uk-UA|
+|ur|ur-PK|
+|uz|uz-Latn-UZ|
+|vi|vi-VN|
+|wo|wo-SN|
+|xh|xh-ZA|
+|yo|yo-NG|
+|zh|zh-CN|
+|zu|zu-ZA|
+
+## License
 
 MIT
