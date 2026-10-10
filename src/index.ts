@@ -15,111 +15,517 @@ export interface Locale {
   currencySymbol: string
   currencyPattern: number
 }
+
+export const vi = {
+  code: "vi-VN",
+  countryCode: "VN",
+  dateFormat: "dd/MM/yyyy",
+  firstDayOfWeek: 2,
+  decimalSeparator: ",",
+  groupSeparator: ".",
+  decimalDigits: 0,
+  currencyCode: "VND",
+  currencySymbol: "₫",
+  currencyPattern: 3,
+}
+export const us = {
+  code: "en-US",
+  countryCode: "US",
+  dateFormat: "M/d/yyyy",
+  firstDayOfWeek: 1,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 2,
+  currencyCode: "USD",
+  currencySymbol: "$",
+  currencyPattern: 0,
+}
+export const ca = {
+  code: "en-CA",
+  countryCode: "CA",
+  dateFormat: "dd/MM/yyyy",
+  firstDayOfWeek: 1,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 2,
+  currencyCode: "CAD",
+  currencySymbol: "$",
+  currencyPattern: 0,
+}
+export const en = {
+  code: "en-GB",
+  countryCode: "GB",
+  dateFormat: "dd/MM/yyyy",
+  firstDayOfWeek: 2,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 2,
+  currencyCode: "GBP",
+  currencySymbol: "£",
+  currencyPattern: 0,
+}
+export const au = {
+  code: "en-AU",
+  countryCode: "AU",
+  dateFormat: "d/MM/yyyy",
+  firstDayOfWeek: 2,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 2,
+  currencyCode: "AUD",
+  currencySymbol: "$",
+  currencyPattern: 0,
+}
+export const nz = {
+  code: "en-NZ",
+  countryCode: "NZ",
+  dateFormat: "d/MM/yyyy",
+  firstDayOfWeek: 2,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 2,
+  currencyCode: "NZD",
+  currencySymbol: "$",
+  currencyPattern: 0,
+}
+export const ch = {
+  code: "de-CH",
+  countryCode: "CH",
+  dateFormat: "dd.MM.yyyy",
+  firstDayOfWeek: 2,
+  decimalSeparator: ".",
+  groupSeparator: "'",
+  decimalDigits: 2,
+  currencyCode: "CHF",
+  currencySymbol: "Fr.",
+  currencyPattern: 2,
+}
+export const de = {
+  code: "de-DE",
+  countryCode: "DE",
+  dateFormat: "dd.MM.yyyy",
+  firstDayOfWeek: 2,
+  decimalSeparator: ",",
+  groupSeparator: ".",
+  decimalDigits: 2,
+  currencyCode: "EUR",
+  currencySymbol: "€",
+  currencyPattern: 3,
+}
+export const fr = {
+  code: "fr-FR",
+  countryCode: "FR",
+  dateFormat: "dd/MM/yyyy",
+  firstDayOfWeek: 2,
+  decimalSeparator: ",",
+  groupSeparator: " ",
+  decimalDigits: 2,
+  currencyCode: "EUR",
+  currencySymbol: "€",
+  currencyPattern: 3,
+}
+export const it = {
+  code: "it-IT",
+  countryCode: "IT",
+  dateFormat: "dd/MM/yyyy",
+  firstDayOfWeek: 2,
+  decimalSeparator: ",",
+  groupSeparator: ".",
+  decimalDigits: 2,
+  currencyCode: "EUR",
+  currencySymbol: "€",
+  currencyPattern: 2,
+}
+export const ru = {
+  code: "ru-RU",
+  countryCode: "RU",
+  dateFormat: "dd.MM.yyyy",
+  firstDayOfWeek: 2,
+  decimalSeparator: ",",
+  groupSeparator: " ",
+  decimalDigits: 2,
+  currencyCode: "RUB",
+  currencySymbol: "һ.",
+  currencyPattern: 1,
+}
+export const ja = {
+  code: "ja-JP",
+  countryCode: "JP",
+  dateFormat: "yyyy/MM/dd",
+  firstDayOfWeek: 1,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 0,
+  currencyCode: "JPY",
+  currencySymbol: "¥",
+  currencyPattern: 0,
+}
+export const ko = {
+  code: "ko-KR",
+  countryCode: "KR",
+  dateFormat: "yyyy-MM-dd",
+  firstDayOfWeek: 1,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 0,
+  currencyCode: "KRW",
+  currencySymbol: "₩",
+  currencyPattern: 0,
+}
+export const zh = {
+  code: "zh-CN",
+  countryCode: "CN",
+  dateFormat: "yyyy/M/d",
+  firstDayOfWeek: 1,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 2,
+  currencyCode: "CNY",
+  currencySymbol: "¥",
+  currencyPattern: 0,
+}
+export const tw = {
+  code: "zh-TW",
+  countryCode: "TW",
+  dateFormat: "yyyy/M/d",
+  firstDayOfWeek: 1,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 2,
+  currencyCode: "TWD",
+  currencySymbol: "NT$",
+  currencyPattern: 0,
+}
+export const hi = {
+  code: "hi-IN",
+  countryCode: "IN",
+  dateFormat: "dd-MM-yyyy",
+  firstDayOfWeek: 2,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 2,
+  currencyCode: "INR",
+  currencySymbol: "₹",
+  currencyPattern: 2,
+}
+export const th = {
+  code: "th-TH",
+  countryCode: "TH",
+  dateFormat: "d/M/yyyy",
+  firstDayOfWeek: 2,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 2,
+  currencyCode: "THB",
+  currencySymbol: "฿",
+  currencyPattern: 0,
+}
+export const sg = {
+  code: "en-SG",
+  countryCode: "SG",
+  dateFormat: "d/M/yyyy",
+  firstDayOfWeek: 1,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 2,
+  currencyCode: "SGD",
+  currencySymbol: "$",
+  currencyPattern: 0,
+}
+export const id = {
+  code: "id-ID",
+  countryCode: "ID",
+  dateFormat: "dd/MM/yyyy",
+  firstDayOfWeek: 2,
+  decimalSeparator: ",",
+  groupSeparator: ".",
+  decimalDigits: 0,
+  currencyCode: "IDR",
+  currencySymbol: "Rp",
+  currencyPattern: 0,
+}
+export const ms = {
+  code: "ms-MY",
+  countryCode: "MY",
+  dateFormat: "dd/MM/yyyy",
+  firstDayOfWeek: 2,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 2,
+  currencyCode: "MYR",
+  currencySymbol: "RM",
+  currencyPattern: 0,
+}
+export const bh = {
+  code: "ar-BH",
+  countryCode: "BH",
+  dateFormat: "dd/MM/yyyy",
+  firstDayOfWeek: 7,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 3,
+  currencyCode: "BHD",
+  currencySymbol: "BD",
+  currencyPattern: 2,
+}
+export const sa = {
+  code: "ar-SA",
+  countryCode: "SA",
+  dateFormat: "dd/MM/yy",
+  firstDayOfWeek: 7,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 2,
+  currencyCode: "SAR",
+  currencySymbol: "SR",
+  currencyPattern: 2,
+}
+export const kw = {
+  code: "ar-KW",
+  countryCode: "KW",
+  dateFormat: "dd/MM/yyyy",
+  firstDayOfWeek: 7,
+  decimalSeparator: ".",
+  groupSeparator: ",",
+  decimalDigits: 3,
+  currencyCode: "KWD",
+  currencySymbol: "KD",
+  currencyPattern: 2,
+}
+export const viLocale = vi
+export const usLocale = us
+export const caLocale = ca
+export const enLocale = en
+export const auLocale = au
+export const nzLocale = nz
+export const chLocale = ch
+export const deLocale = de
+export const frLocale = fr
+export const itLocale = it
+export const ruLocale = ru
+export const jaLocale = ja
+export const koLocale = ko
+export const zhLocale = zh
+export const twLocale = tw
+export const hiLocale = hi
+export const thLocale = th
+export const sgLocale = sg
+export const idLocale = id
+export const msLocale = ms
+export const bhLocale = bh
+export const saLocale = sa
+export const kwLocale = kw
+
+export const aed = {"code":"AED","symbol":"د.إ","decimalDigits":2}
+export const afn = {"code":"AFN","symbol":"؋","decimalDigits":2}
+export const all = {"code":"ALL","symbol":"Lek","decimalDigits":2}
+export const amd = {"code":"AMD","symbol":"դր.","decimalDigits":2}
+export const ars = {"code":"ARS","symbol":"$","decimalDigits":2}
+export const aud = {"code":"AUD","symbol":"$","decimalDigits":2}
+export const azn = {"code":"AZN","symbol":"ман.","decimalDigits":2}
+export const bam = {"code":"BAM","symbol":"KM","decimalDigits":2}
+export const bdt = {"code":"BDT","symbol":"৳","decimalDigits":2}
+export const bgn = {"code":"BGN","symbol":"лв.","decimalDigits":2}
+export const bhd = {"code":"BHD","symbol":"BD","decimalDigits":3}
+export const bnd = {"code":"BND","symbol":"$","decimalDigits":0}
+export const bob = {"code":"BOB","symbol":"$b","decimalDigits":2}
+export const brl = {"code":"BRL","symbol":"R$","decimalDigits":2}
+export const byr = {"code":"BYR","symbol":"р.","decimalDigits":2}
+export const bzd = {"code":"BZD","symbol":"BZ$","decimalDigits":2}
+export const cad = {"code":"CAD","symbol":"$","decimalDigits":2}
+export const clp = {"code":"CLP","symbol":"$","decimalDigits":2}
+export const cny = {"code":"CNY","symbol":"¥","decimalDigits":2}
+export const cop = {"code":"COP","symbol":"$","decimalDigits":2}
+export const crc = {"code":"CRC","symbol":"₡","decimalDigits":2}
+export const csd = {"code":"CSD","symbol":"Дин.","decimalDigits":2}
+export const czk = {"code":"CZK","symbol":"Kč","decimalDigits":2}
+export const chf = {"code":"CHF","symbol":"Fr.","decimalDigits":2}
+export const dkk = {"code":"DKK","symbol":"kr.","decimalDigits":2}
+export const dop = {"code":"DOP","symbol":"RD$","decimalDigits":2}
+export const dzd = {"code":"DZD","symbol":"DA","decimalDigits":2}
+export const eek = {"code":"EEK","symbol":"kr","decimalDigits":2}
+export const egp = {"code":"EGP","symbol":"£","decimalDigits":2}
+export const etb = {"code":"ETB","symbol":"Br","decimalDigits":2}
+export const eur = {"code":"EUR","symbol":"€","decimalDigits":2}
+export const gbp = {"code":"GBP","symbol":"£","decimalDigits":2}
+export const gel = {"code":"GEL","symbol":"Lari","decimalDigits":2}
+export const gtq = {"code":"GTQ","symbol":"Q","decimalDigits":2}
+export const hkd = {"code":"HKD","symbol":"HK$","decimalDigits":2}
+export const hnl = {"code":"HNL","symbol":"L.","decimalDigits":2}
+export const hrk = {"code":"HRK","symbol":"kn","decimalDigits":2}
+export const huf = {"code":"HUF","symbol":"Ft","decimalDigits":2}
+export const idr = {"code":"IDR","symbol":"Rp","decimalDigits":0}
+export const ils = {"code":"ILS","symbol":"₪","decimalDigits":2}
+export const inr = {"code":"INR","symbol":"₹","decimalDigits":2}
+export const iqd = {"code":"IQD","symbol":"ID","decimalDigits":2}
+export const irr = {"code":"IRR","symbol":"ريال","decimalDigits":2}
+export const isk = {"code":"ISK","symbol":"kr.","decimalDigits":0}
+export const jmd = {"code":"JMD","symbol":"J$","decimalDigits":2}
+export const jod = {"code":"JOD","symbol":"د.أ","decimalDigits":3}
+export const jpy = {"code":"JPY","symbol":"¥","decimalDigits":0}
+export const kes = {"code":"KES","symbol":"S","decimalDigits":2}
+export const kgs = {"code":"KGS","symbol":"сом","decimalDigits":2}
+export const krw = {"code":"KRW","symbol":"₩","decimalDigits":0}
+export const kwd = {"code":"KWD","symbol":"KD","decimalDigits":3}
+export const kzt = {"code":"KZT","symbol":"Т","decimalDigits":2}
+export const khr = {"code":"KHR","symbol":"៛","decimalDigits":2}
+export const lak = {"code":"LAK","symbol":"₭","decimalDigits":2}
+export const lbp = {"code":"LBP","symbol":"LL","decimalDigits":2}
+export const lkr = {"code":"LKR","symbol":"රු.","decimalDigits":2}
+export const ltl = {"code":"LTL","symbol":"Lt","decimalDigits":2}
+export const lvl = {"code":"LVL","symbol":"Ls","decimalDigits":2}
+export const lyd = {"code":"LYD","symbol":"LD","decimalDigits":3}
+export const mad = {"code":"MAD","symbol":"DH","decimalDigits":2}
+export const mkd = {"code":"MKD","symbol":"ден.","decimalDigits":2}
+export const mnt = {"code":"MNT","symbol":"₮","decimalDigits":2}
+export const mop = {"code":"MOP","symbol":"$","decimalDigits":2}
+export const mvr = {"code":"MVR","symbol":"ރ.","decimalDigits":2}
+export const mxn = {"code":"MXN","symbol":"$","decimalDigits":2}
+export const myr = {"code":"MYR","symbol":"RM","decimalDigits":2}
+export const nio = {"code":"NIO","symbol":"C$","decimalDigits":2}
+export const nok = {"code":"NOK","symbol":"kr","decimalDigits":2}
+export const npr = {"code":"NPR","symbol":"रु","decimalDigits":2}
+export const nzd = {"code":"NZD","symbol":"$","decimalDigits":2}
+export const omr = {"code":"OMR","symbol":"R.O","decimalDigits":3}
+export const pab = {"code":"PAB","symbol":"B/.","decimalDigits":2}
+export const pen = {"code":"PEN","symbol":"S/.","decimalDigits":2}
+export const pkr = {"code":"PKR","symbol":"Rs","decimalDigits":2}
+export const pln = {"code":"PLN","symbol":"zł","decimalDigits":2}
+export const pyg = {"code":"PYG","symbol":"Gs","decimalDigits":2}
+export const php = {"code":"PHP","symbol":"₱","decimalDigits":2}
+export const qar = {"code":"QAR","symbol":"QR","decimalDigits":2}
+export const ron = {"code":"RON","symbol":"lei","decimalDigits":2}
+export const rsd = {"code":"RSD","symbol":"Дин.","decimalDigits":2}
+export const rub = {"code":"RUB","symbol":"һ.","decimalDigits":2}
+export const rwf = {"code":"RWF","symbol":"R₣","decimalDigits":2}
+export const sar = {"code":"SAR","symbol":"SR","decimalDigits":2}
+export const sek = {"code":"SEK","symbol":"kr","decimalDigits":2}
+export const sgd = {"code":"SGD","symbol":"$","decimalDigits":2}
+export const syp = {"code":"SYP","symbol":"LS","decimalDigits":2}
+export const tjs = {"code":"TJS","symbol":"т.р.","decimalDigits":2}
+export const tmt = {"code":"TMT","symbol":"m.","decimalDigits":2}
+export const tnd = {"code":"TND","symbol":"DT","decimalDigits":3}
+export const ttd = {"code":"TTD","symbol":"TT$","decimalDigits":2}
+export const twd = {"code":"TWD","symbol":"NT$","decimalDigits":2}
+export const thb = {"code":"THB","symbol":"฿","decimalDigits":2}
+export const TRY = {"code":"TRY","symbol":"TL","decimalDigits":2}
+export const uah = {"code":"UAH","symbol":"₴","decimalDigits":2}
+export const usd = {"code":"USD","symbol":"$","decimalDigits":2}
+export const uyu = {"code":"UYU","symbol":"$U","decimalDigits":2}
+export const uzs = {"code":"UZS","symbol":"лв","decimalDigits":2}
+export const vef = {"code":"VEF","symbol":"Bs.","decimalDigits":2}
+export const vnd = {"code":"VND","symbol":"₫","decimalDigits":0}
+export const xof = {"code":"XOF","symbol":"XOF","decimalDigits":2}
+export const yer = {"code":"YER","symbol":"﷼","decimalDigits":2}
+export const zar = {"code":"ZAR","symbol":"R","decimalDigits":2}
+export const zwl = {"code":"ZWL","symbol":"Z$","decimalDigits":2}
+
 const currencyMap = new Map<string, Currency>([
-  ["AED", { code: "AED", symbol: "د.إ", decimalDigits: 2 }],
-  ["AFN", { code: "AFN", symbol: "؋", decimalDigits: 2 }],
-  ["ALL", { code: "ALL", symbol: "Lek", decimalDigits: 2 }],
-  ["AMD", { code: "AMD", symbol: "դր.", decimalDigits: 2 }],
-  ["ARS", { code: "ARS", symbol: "$", decimalDigits: 2 }],
-  ["AUD", { code: "AUD", symbol: "$", decimalDigits: 2 }],
-  ["AZN", { code: "AZN", symbol: "ман.", decimalDigits: 2 }],
-  ["BAM", { code: "BAM", symbol: "KM", decimalDigits: 2 }],
-  ["BDT", { code: "BDT", symbol: "৳", decimalDigits: 2 }],
-  ["BGN", { code: "BGN", symbol: "лв.", decimalDigits: 2 }],
-  ["BHD", { code: "BHD", symbol: "BD", decimalDigits: 3 }],
-  ["BND", { code: "BND", symbol: "$", decimalDigits: 0 }],
-  ["BOB", { code: "BOB", symbol: "$b", decimalDigits: 2 }],
-  ["BRL", { code: "BRL", symbol: "R$", decimalDigits: 2 }],
-  ["BYR", { code: "BYR", symbol: "р.", decimalDigits: 2 }],
-  ["BZD", { code: "BZD", symbol: "BZ$", decimalDigits: 2 }],
-  ["CAD", { code: "CAD", symbol: "$", decimalDigits: 2 }],
-  ["CHF", { code: "CHF", symbol: "Fr.", decimalDigits: 2 }],
-  ["CLP", { code: "CLP", symbol: "$", decimalDigits: 2 }],
-  ["CNY", { code: "CNY", symbol: "¥", decimalDigits: 2 }],
-  ["COP", { code: "COP", symbol: "$", decimalDigits: 2 }],
-  ["CRC", { code: "CRC", symbol: "₡", decimalDigits: 2 }],
-  ["CSD", { code: "CSD", symbol: "Дин.", decimalDigits: 2 }],
-  ["CZK", { code: "CZK", symbol: "Kč", decimalDigits: 2 }],
-  ["DKK", { code: "DKK", symbol: "kr.", decimalDigits: 2 }],
-  ["DOP", { code: "DOP", symbol: "RD$", decimalDigits: 2 }],
-  ["DZD", { code: "DZD", symbol: "DA", decimalDigits: 2 }],
-  ["EEK", { code: "EEK", symbol: "kr", decimalDigits: 2 }],
-  ["EGP", { code: "EGP", symbol: "£", decimalDigits: 2 }],
-  ["ETB", { code: "ETB", symbol: "Br", decimalDigits: 2 }],
-  ["EUR", { code: "EUR", symbol: "€", decimalDigits: 2 }],
-  ["GBP", { code: "GBP", symbol: "£", decimalDigits: 2 }],
-  ["GEL", { code: "GEL", symbol: "Lari", decimalDigits: 2 }],
-  ["GTQ", { code: "GTQ", symbol: "Q", decimalDigits: 2 }],
-  ["HKD", { code: "HKD", symbol: "HK$", decimalDigits: 2 }],
-  ["HNL", { code: "HNL", symbol: "L.", decimalDigits: 2 }],
-  ["HRK", { code: "HRK", symbol: "kn", decimalDigits: 2 }],
-  ["HUF", { code: "HUF", symbol: "Ft", decimalDigits: 2 }],
-  ["IDR", { code: "IDR", symbol: "Rp", decimalDigits: 0 }],
-  ["ILS", { code: "ILS", symbol: "₪", decimalDigits: 2 }],
-  ["INR", { code: "INR", symbol: "₹", decimalDigits: 2 }],
-  ["IQD", { code: "IQD", symbol: "ID", decimalDigits: 2 }],
-  ["IRR", { code: "IRR", symbol: "ريال", decimalDigits: 2 }],
-  ["ISK", { code: "ISK", symbol: "kr.", decimalDigits: 0 }],
-  ["JMD", { code: "JMD", symbol: "J$", decimalDigits: 2 }],
-  ["JOD", { code: "JOD", symbol: "د.أ", decimalDigits: 3 }],
-  ["JPY", { code: "JPY", symbol: "¥", decimalDigits: 0 }],
-  ["KES", { code: "KES", symbol: "S", decimalDigits: 2 }],
-  ["KGS", { code: "KGS", symbol: "сом", decimalDigits: 2 }],
-  ["KHR", { code: "KHR", symbol: "៛", decimalDigits: 2 }],
-  ["KRW", { code: "KRW", symbol: "₩", decimalDigits: 0 }],
-  ["KWD", { code: "KWD", symbol: "KD", decimalDigits: 3 }],
-  ["KZT", { code: "KZT", symbol: "Т", decimalDigits: 2 }],
-  ["LAK", { code: "LAK", symbol: "₭", decimalDigits: 2 }],
-  ["LBP", { code: "LBP", symbol: "LL", decimalDigits: 2 }],
-  ["LKR", { code: "LKR", symbol: "රු.", decimalDigits: 2 }],
-  ["LTL", { code: "LTL", symbol: "Lt", decimalDigits: 2 }],
-  ["LVL", { code: "LVL", symbol: "Ls", decimalDigits: 2 }],
-  ["LYD", { code: "LYD", symbol: "LD", decimalDigits: 3 }],
-  ["MAD", { code: "MAD", symbol: "DH", decimalDigits: 2 }],
-  ["MKD", { code: "MKD", symbol: "ден.", decimalDigits: 2 }],
-  ["MNT", { code: "MNT", symbol: "₮", decimalDigits: 2 }],
-  ["MOP", { code: "MOP", symbol: "$", decimalDigits: 2 }],
-  ["MVR", { code: "MVR", symbol: "ރ.", decimalDigits: 2 }],
-  ["MXN", { code: "MXN", symbol: "$", decimalDigits: 2 }],
-  ["MYR", { code: "MYR", symbol: "RM", decimalDigits: 2 }],
-  ["NIO", { code: "NIO", symbol: "C$", decimalDigits: 2 }],
-  ["NOK", { code: "NOK", symbol: "kr", decimalDigits: 2 }],
-  ["NPR", { code: "NPR", symbol: "रु", decimalDigits: 2 }],
-  ["NZD", { code: "NZD", symbol: "$", decimalDigits: 2 }],
-  ["OMR", { code: "OMR", symbol: "R.O", decimalDigits: 3 }],
-  ["PAB", { code: "PAB", symbol: "B/.", decimalDigits: 2 }],
-  ["PEN", { code: "PEN", symbol: "S/.", decimalDigits: 2 }],
-  ["PHP", { code: "PHP", symbol: "₱", decimalDigits: 2 }],
-  ["PKR", { code: "PKR", symbol: "Rs", decimalDigits: 2 }],
-  ["PLN", { code: "PLN", symbol: "zł", decimalDigits: 2 }],
-  ["PYG", { code: "PYG", symbol: "Gs", decimalDigits: 2 }],
-  ["QAR", { code: "QAR", symbol: "QR", decimalDigits: 2 }],
-  ["RON", { code: "RON", symbol: "lei", decimalDigits: 2 }],
-  ["RSD", { code: "RSD", symbol: "Дин.", decimalDigits: 2 }],
-  ["RUB", { code: "RUB", symbol: "һ.", decimalDigits: 2 }],
-  ["RWF", { code: "RWF", symbol: "R₣", decimalDigits: 2 }],
-  ["SAR", { code: "SAR", symbol: "SR", decimalDigits: 2 }],
-  ["SEK", { code: "SEK", symbol: "kr", decimalDigits: 2 }],
-  ["SGD", { code: "SGD", symbol: "$", decimalDigits: 2 }],
-  ["SYP", { code: "SYP", symbol: "LS", decimalDigits: 2 }],
-  ["THB", { code: "THB", symbol: "฿", decimalDigits: 2 }],
-  ["TJS", { code: "TJS", symbol: "т.р.", decimalDigits: 2 }],
-  ["TMT", { code: "TMT", symbol: "m.", decimalDigits: 2 }],
-  ["TND", { code: "TND", symbol: "DT", decimalDigits: 3 }],
-  ["TRY", { code: "TRY", symbol: "TL", decimalDigits: 2 }],
-  ["TTD", { code: "TTD", symbol: "TT$", decimalDigits: 2 }],
-  ["TWD", { code: "TWD", symbol: "NT$", decimalDigits: 2 }],
-  ["UAH", { code: "UAH", symbol: "₴", decimalDigits: 2 }],
-  ["USD", { code: "USD", symbol: "$", decimalDigits: 2 }],
-  ["UYU", { code: "UYU", symbol: "$U", decimalDigits: 2 }],
-  ["UZS", { code: "UZS", symbol: "лв", decimalDigits: 2 }],
-  ["VEF", { code: "VEF", symbol: "Bs.", decimalDigits: 2 }],
-  ["VND", { code: "VND", symbol: "₫", decimalDigits: 0 }],
-  ["XOF", { code: "XOF", symbol: "XOF", decimalDigits: 2 }],
-  ["YER", { code: "YER", symbol: "﷼", decimalDigits: 2 }],
-  ["ZAR", { code: "ZAR", symbol: "R", decimalDigits: 2 }],
-  ["ZWL", { code: "ZWL", symbol: "Z$", decimalDigits: 2 }],
+  ["AED", aed],
+  ["AFN", afn],
+  ["ALL", all],
+  ["AMD", amd],
+  ["ARS", ars],
+  ["AUD", aud],
+  ["AZN", azn],
+  ["BAM", bam],
+  ["BDT", bdt],
+  ["BGN", bgn],
+  ["BHD", bhd],
+  ["BND", bnd],
+  ["BOB", bob],
+  ["BRL", brl],
+  ["BYR", byr],
+  ["BZD", bzd],
+  ["CAD", cad],
+  ["CLP", clp],
+  ["CNY", cny],
+  ["COP", cop],
+  ["CRC", crc],
+  ["CSD", csd],
+  ["CZK", czk],
+  ["CHF", chf],
+  ["DKK", dkk],
+  ["DOP", dop],
+  ["DZD", dzd],
+  ["EEK", eek],
+  ["EGP", egp],
+  ["ETB", etb],
+  ["EUR", eur],
+  ["GBP", gbp],
+  ["GEL", gel],
+  ["GTQ", gtq],
+  ["HKD", hkd],
+  ["HNL", hnl],
+  ["HRK", hrk],
+  ["HUF", huf],
+  ["IDR", idr],
+  ["ILS", ils],
+  ["INR", inr],
+  ["IQD", iqd],
+  ["IRR", irr],
+  ["ISK", isk],
+  ["JMD", jmd],
+  ["JOD", jod],
+  ["JPY", jpy],
+  ["KES", kes],
+  ["KGS", kgs],
+  ["KRW", krw],
+  ["KWD", kwd],
+  ["KZT", kzt],
+  ["KHR", khr],
+  ["LAK", lak],
+  ["LBP", lbp],
+  ["LKR", lkr],
+  ["LTL", ltl],
+  ["LVL", lvl],
+  ["LYD", lyd],
+  ["MAD", mad],
+  ["MKD", mkd],
+  ["MNT", mnt],
+  ["MOP", mop],
+  ["MVR", mvr],
+  ["MXN", mxn],
+  ["MYR", myr],
+  ["NIO", nio],
+  ["NOK", nok],
+  ["NPR", npr],
+  ["NZD", nzd],
+  ["OMR", omr],
+  ["PAB", pab],
+  ["PEN", pen],
+  ["PKR", pkr],
+  ["PLN", pln],
+  ["PYG", pyg],
+  ["PHP", php],
+  ["QAR", qar],
+  ["RON", ron],
+  ["RSD", rsd],
+  ["RUB", rub],
+  ["RWF", rwf],
+  ["SAR", sar],
+  ["SEK", sek],
+  ["SGD", sgd],
+  ["SYP", syp],
+  ["TJS", tjs],
+  ["TMT", tmt],
+  ["TND", tnd],
+  ["TTD", ttd],
+  ["TWD", twd],
+  ["THB", thb],
+  ["TRY", TRY],
+  ["UAH", uah],
+  ["USD", usd],
+  ["UYU", uyu],
+  ["UZS", uzs],
+  ["VEF", vef],
+  ["VND", vnd],
+  ["XOF", xof],
+  ["YER", yer],
+  ["ZAR", zar],
+  ["ZWL", zwl],
 ])
+
 const localeMap = new Map<string, Locale>([
   [
     "af-ZA",
@@ -3398,70 +3804,6 @@ const langMap = new Map<string, string>([
   ["zu", "zu-ZA"],
 ])
 
-export const vi = {
-  id: "vi-VN",
-  countryCode: "VN",
-  dateFormat: "dd/MM/yyyy",
-  firstDayOfWeek: 2,
-  decimalSeparator: ",",
-  groupSeparator: ".",
-  decimalDigits: 0,
-  currencyCode: "VND",
-  currencySymbol: "₫",
-  currencyPattern: 3,
-}
-export const us = {
-  id: "en-US",
-  countryCode: "US",
-  dateFormat: "M/d/yyyy",
-  firstDayOfWeek: 1,
-  decimalSeparator: ".",
-  groupSeparator: ",",
-  decimalDigits: 2,
-  currencyCode: "USD",
-  currencySymbol: "$",
-  currencyPattern: 0,
-}
-export const th = {
-  id: "th-TH",
-  countryCode: "TH",
-  dateFormat: "d/M/yyyy",
-  firstDayOfWeek: 2,
-  decimalSeparator: ".",
-  groupSeparator: ",",
-  decimalDigits: 2,
-  currencyCode: "THB",
-  currencySymbol: "฿",
-  currencyPattern: 0,
-}
-export const id = {
-  id: "id-ID",
-  countryCode: "ID",
-  dateFormat: "dd/MM/yyyy",
-  firstDayOfWeek: 2,
-  decimalSeparator: ",",
-  groupSeparator: ".",
-  decimalDigits: 0,
-  currencyCode: "IDR",
-  currencySymbol: "Rp",
-  currencyPattern: 0,
-}
-
-export const viLocale = vi
-export const usLocale = us
-export const thLocale = th
-export const idLocale = id
-
-export const usd: Currency = {
-  code: "USD",
-  symbol: "$",
-  decimalDigits: 2,
-}
-export const vnd: Currency = {
-  code: "VND",
-  symbol: "₫",
-  decimalDigits: 0,
-}
 // tslint:disable-next-line:class-name
 export class resources {
   static defaultLocale = us
