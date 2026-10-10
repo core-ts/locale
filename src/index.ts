@@ -316,109 +316,109 @@ export const bhLocale = bh
 export const saLocale = sa
 export const kwLocale = kw
 
-export const aed = {"code":"AED","symbol":"د.إ","decimalDigits":2}
-export const afn = {"code":"AFN","symbol":"؋","decimalDigits":2}
-export const all = {"code":"ALL","symbol":"Lek","decimalDigits":2}
-export const amd = {"code":"AMD","symbol":"դր.","decimalDigits":2}
-export const ars = {"code":"ARS","symbol":"$","decimalDigits":2}
-export const aud = {"code":"AUD","symbol":"$","decimalDigits":2}
-export const azn = {"code":"AZN","symbol":"ман.","decimalDigits":2}
-export const bam = {"code":"BAM","symbol":"KM","decimalDigits":2}
-export const bdt = {"code":"BDT","symbol":"৳","decimalDigits":2}
-export const bgn = {"code":"BGN","symbol":"лв.","decimalDigits":2}
-export const bhd = {"code":"BHD","symbol":"BD","decimalDigits":3}
-export const bnd = {"code":"BND","symbol":"$","decimalDigits":0}
-export const bob = {"code":"BOB","symbol":"$b","decimalDigits":2}
-export const brl = {"code":"BRL","symbol":"R$","decimalDigits":2}
-export const byr = {"code":"BYR","symbol":"р.","decimalDigits":2}
-export const bzd = {"code":"BZD","symbol":"BZ$","decimalDigits":2}
-export const cad = {"code":"CAD","symbol":"$","decimalDigits":2}
-export const clp = {"code":"CLP","symbol":"$","decimalDigits":2}
-export const cny = {"code":"CNY","symbol":"¥","decimalDigits":2}
-export const cop = {"code":"COP","symbol":"$","decimalDigits":2}
-export const crc = {"code":"CRC","symbol":"₡","decimalDigits":2}
-export const csd = {"code":"CSD","symbol":"Дин.","decimalDigits":2}
-export const czk = {"code":"CZK","symbol":"Kč","decimalDigits":2}
-export const chf = {"code":"CHF","symbol":"Fr.","decimalDigits":2}
-export const dkk = {"code":"DKK","symbol":"kr.","decimalDigits":2}
-export const dop = {"code":"DOP","symbol":"RD$","decimalDigits":2}
-export const dzd = {"code":"DZD","symbol":"DA","decimalDigits":2}
-export const eek = {"code":"EEK","symbol":"kr","decimalDigits":2}
-export const egp = {"code":"EGP","symbol":"£","decimalDigits":2}
-export const etb = {"code":"ETB","symbol":"Br","decimalDigits":2}
-export const eur = {"code":"EUR","symbol":"€","decimalDigits":2}
-export const gbp = {"code":"GBP","symbol":"£","decimalDigits":2}
-export const gel = {"code":"GEL","symbol":"Lari","decimalDigits":2}
-export const gtq = {"code":"GTQ","symbol":"Q","decimalDigits":2}
-export const hkd = {"code":"HKD","symbol":"HK$","decimalDigits":2}
-export const hnl = {"code":"HNL","symbol":"L.","decimalDigits":2}
-export const hrk = {"code":"HRK","symbol":"kn","decimalDigits":2}
-export const huf = {"code":"HUF","symbol":"Ft","decimalDigits":2}
-export const idr = {"code":"IDR","symbol":"Rp","decimalDigits":0}
-export const ils = {"code":"ILS","symbol":"₪","decimalDigits":2}
-export const inr = {"code":"INR","symbol":"₹","decimalDigits":2}
-export const iqd = {"code":"IQD","symbol":"ID","decimalDigits":2}
-export const irr = {"code":"IRR","symbol":"ريال","decimalDigits":2}
-export const isk = {"code":"ISK","symbol":"kr.","decimalDigits":0}
-export const jmd = {"code":"JMD","symbol":"J$","decimalDigits":2}
-export const jod = {"code":"JOD","symbol":"د.أ","decimalDigits":3}
-export const jpy = {"code":"JPY","symbol":"¥","decimalDigits":0}
-export const kes = {"code":"KES","symbol":"S","decimalDigits":2}
-export const kgs = {"code":"KGS","symbol":"сом","decimalDigits":2}
-export const krw = {"code":"KRW","symbol":"₩","decimalDigits":0}
-export const kwd = {"code":"KWD","symbol":"KD","decimalDigits":3}
-export const kzt = {"code":"KZT","symbol":"Т","decimalDigits":2}
-export const khr = {"code":"KHR","symbol":"៛","decimalDigits":2}
-export const lak = {"code":"LAK","symbol":"₭","decimalDigits":2}
-export const lbp = {"code":"LBP","symbol":"LL","decimalDigits":2}
-export const lkr = {"code":"LKR","symbol":"රු.","decimalDigits":2}
-export const ltl = {"code":"LTL","symbol":"Lt","decimalDigits":2}
-export const lvl = {"code":"LVL","symbol":"Ls","decimalDigits":2}
-export const lyd = {"code":"LYD","symbol":"LD","decimalDigits":3}
-export const mad = {"code":"MAD","symbol":"DH","decimalDigits":2}
-export const mkd = {"code":"MKD","symbol":"ден.","decimalDigits":2}
-export const mnt = {"code":"MNT","symbol":"₮","decimalDigits":2}
-export const mop = {"code":"MOP","symbol":"$","decimalDigits":2}
-export const mvr = {"code":"MVR","symbol":"ރ.","decimalDigits":2}
-export const mxn = {"code":"MXN","symbol":"$","decimalDigits":2}
-export const myr = {"code":"MYR","symbol":"RM","decimalDigits":2}
-export const nio = {"code":"NIO","symbol":"C$","decimalDigits":2}
-export const nok = {"code":"NOK","symbol":"kr","decimalDigits":2}
-export const npr = {"code":"NPR","symbol":"रु","decimalDigits":2}
-export const nzd = {"code":"NZD","symbol":"$","decimalDigits":2}
-export const omr = {"code":"OMR","symbol":"R.O","decimalDigits":3}
-export const pab = {"code":"PAB","symbol":"B/.","decimalDigits":2}
-export const pen = {"code":"PEN","symbol":"S/.","decimalDigits":2}
-export const pkr = {"code":"PKR","symbol":"Rs","decimalDigits":2}
-export const pln = {"code":"PLN","symbol":"zł","decimalDigits":2}
-export const pyg = {"code":"PYG","symbol":"Gs","decimalDigits":2}
-export const php = {"code":"PHP","symbol":"₱","decimalDigits":2}
-export const qar = {"code":"QAR","symbol":"QR","decimalDigits":2}
-export const ron = {"code":"RON","symbol":"lei","decimalDigits":2}
-export const rsd = {"code":"RSD","symbol":"Дин.","decimalDigits":2}
-export const rub = {"code":"RUB","symbol":"һ.","decimalDigits":2}
-export const rwf = {"code":"RWF","symbol":"R₣","decimalDigits":2}
-export const sar = {"code":"SAR","symbol":"SR","decimalDigits":2}
-export const sek = {"code":"SEK","symbol":"kr","decimalDigits":2}
-export const sgd = {"code":"SGD","symbol":"$","decimalDigits":2}
-export const syp = {"code":"SYP","symbol":"LS","decimalDigits":2}
-export const tjs = {"code":"TJS","symbol":"т.р.","decimalDigits":2}
-export const tmt = {"code":"TMT","symbol":"m.","decimalDigits":2}
-export const tnd = {"code":"TND","symbol":"DT","decimalDigits":3}
-export const ttd = {"code":"TTD","symbol":"TT$","decimalDigits":2}
-export const twd = {"code":"TWD","symbol":"NT$","decimalDigits":2}
-export const thb = {"code":"THB","symbol":"฿","decimalDigits":2}
-export const TRY = {"code":"TRY","symbol":"TL","decimalDigits":2}
-export const uah = {"code":"UAH","symbol":"₴","decimalDigits":2}
-export const usd = {"code":"USD","symbol":"$","decimalDigits":2}
-export const uyu = {"code":"UYU","symbol":"$U","decimalDigits":2}
-export const uzs = {"code":"UZS","symbol":"лв","decimalDigits":2}
-export const vef = {"code":"VEF","symbol":"Bs.","decimalDigits":2}
-export const vnd = {"code":"VND","symbol":"₫","decimalDigits":0}
-export const xof = {"code":"XOF","symbol":"XOF","decimalDigits":2}
-export const yer = {"code":"YER","symbol":"﷼","decimalDigits":2}
-export const zar = {"code":"ZAR","symbol":"R","decimalDigits":2}
-export const zwl = {"code":"ZWL","symbol":"Z$","decimalDigits":2}
+export const aed = { code: "AED", symbol: "د.إ", decimalDigits: 2 }
+export const afn = { code: "AFN", symbol: "؋", decimalDigits: 2 }
+export const all = { code: "ALL", symbol: "Lek", decimalDigits: 2 }
+export const amd = { code: "AMD", symbol: "դր.", decimalDigits: 2 }
+export const ars = { code: "ARS", symbol: "$", decimalDigits: 2 }
+export const aud = { code: "AUD", symbol: "$", decimalDigits: 2 }
+export const azn = { code: "AZN", symbol: "ман.", decimalDigits: 2 }
+export const bam = { code: "BAM", symbol: "KM", decimalDigits: 2 }
+export const bdt = { code: "BDT", symbol: "৳", decimalDigits: 2 }
+export const bgn = { code: "BGN", symbol: "лв.", decimalDigits: 2 }
+export const bhd = { code: "BHD", symbol: "BD", decimalDigits: 3 }
+export const bnd = { code: "BND", symbol: "$", decimalDigits: 0 }
+export const bob = { code: "BOB", symbol: "$b", decimalDigits: 2 }
+export const brl = { code: "BRL", symbol: "R$", decimalDigits: 2 }
+export const byr = { code: "BYR", symbol: "р.", decimalDigits: 2 }
+export const bzd = { code: "BZD", symbol: "BZ$", decimalDigits: 2 }
+export const cad = { code: "CAD", symbol: "$", decimalDigits: 2 }
+export const clp = { code: "CLP", symbol: "$", decimalDigits: 2 }
+export const cny = { code: "CNY", symbol: "¥", decimalDigits: 2 }
+export const cop = { code: "COP", symbol: "$", decimalDigits: 2 }
+export const crc = { code: "CRC", symbol: "₡", decimalDigits: 2 }
+export const csd = { code: "CSD", symbol: "Дин.", decimalDigits: 2 }
+export const czk = { code: "CZK", symbol: "Kč", decimalDigits: 2 }
+export const chf = { code: "CHF", symbol: "Fr.", decimalDigits: 2 }
+export const dkk = { code: "DKK", symbol: "kr.", decimalDigits: 2 }
+export const dop = { code: "DOP", symbol: "RD$", decimalDigits: 2 }
+export const dzd = { code: "DZD", symbol: "DA", decimalDigits: 2 }
+export const eek = { code: "EEK", symbol: "kr", decimalDigits: 2 }
+export const egp = { code: "EGP", symbol: "£", decimalDigits: 2 }
+export const etb = { code: "ETB", symbol: "Br", decimalDigits: 2 }
+export const eur = { code: "EUR", symbol: "€", decimalDigits: 2 }
+export const gbp = { code: "GBP", symbol: "£", decimalDigits: 2 }
+export const gel = { code: "GEL", symbol: "Lari", decimalDigits: 2 }
+export const gtq = { code: "GTQ", symbol: "Q", decimalDigits: 2 }
+export const hkd = { code: "HKD", symbol: "HK$", decimalDigits: 2 }
+export const hnl = { code: "HNL", symbol: "L.", decimalDigits: 2 }
+export const hrk = { code: "HRK", symbol: "kn", decimalDigits: 2 }
+export const huf = { code: "HUF", symbol: "Ft", decimalDigits: 2 }
+export const idr = { code: "IDR", symbol: "Rp", decimalDigits: 0 }
+export const ils = { code: "ILS", symbol: "₪", decimalDigits: 2 }
+export const inr = { code: "INR", symbol: "₹", decimalDigits: 2 }
+export const iqd = { code: "IQD", symbol: "ID", decimalDigits: 2 }
+export const irr = { code: "IRR", symbol: "ريال", decimalDigits: 2 }
+export const isk = { code: "ISK", symbol: "kr.", decimalDigits: 0 }
+export const jmd = { code: "JMD", symbol: "J$", decimalDigits: 2 }
+export const jod = { code: "JOD", symbol: "د.أ", decimalDigits: 3 }
+export const jpy = { code: "JPY", symbol: "¥", decimalDigits: 0 }
+export const kes = { code: "KES", symbol: "S", decimalDigits: 2 }
+export const kgs = { code: "KGS", symbol: "сом", decimalDigits: 2 }
+export const krw = { code: "KRW", symbol: "₩", decimalDigits: 0 }
+export const kwd = { code: "KWD", symbol: "KD", decimalDigits: 3 }
+export const kzt = { code: "KZT", symbol: "Т", decimalDigits: 2 }
+export const khr = { code: "KHR", symbol: "៛", decimalDigits: 2 }
+export const lak = { code: "LAK", symbol: "₭", decimalDigits: 2 }
+export const lbp = { code: "LBP", symbol: "LL", decimalDigits: 2 }
+export const lkr = { code: "LKR", symbol: "රු.", decimalDigits: 2 }
+export const ltl = { code: "LTL", symbol: "Lt", decimalDigits: 2 }
+export const lvl = { code: "LVL", symbol: "Ls", decimalDigits: 2 }
+export const lyd = { code: "LYD", symbol: "LD", decimalDigits: 3 }
+export const mad = { code: "MAD", symbol: "DH", decimalDigits: 2 }
+export const mkd = { code: "MKD", symbol: "ден.", decimalDigits: 2 }
+export const mnt = { code: "MNT", symbol: "₮", decimalDigits: 2 }
+export const mop = { code: "MOP", symbol: "$", decimalDigits: 2 }
+export const mvr = { code: "MVR", symbol: "ރ.", decimalDigits: 2 }
+export const mxn = { code: "MXN", symbol: "$", decimalDigits: 2 }
+export const myr = { code: "MYR", symbol: "RM", decimalDigits: 2 }
+export const nio = { code: "NIO", symbol: "C$", decimalDigits: 2 }
+export const nok = { code: "NOK", symbol: "kr", decimalDigits: 2 }
+export const npr = { code: "NPR", symbol: "रु", decimalDigits: 2 }
+export const nzd = { code: "NZD", symbol: "$", decimalDigits: 2 }
+export const omr = { code: "OMR", symbol: "R.O", decimalDigits: 3 }
+export const pab = { code: "PAB", symbol: "B/.", decimalDigits: 2 }
+export const pen = { code: "PEN", symbol: "S/.", decimalDigits: 2 }
+export const pkr = { code: "PKR", symbol: "Rs", decimalDigits: 2 }
+export const pln = { code: "PLN", symbol: "zł", decimalDigits: 2 }
+export const pyg = { code: "PYG", symbol: "Gs", decimalDigits: 2 }
+export const php = { code: "PHP", symbol: "₱", decimalDigits: 2 }
+export const qar = { code: "QAR", symbol: "QR", decimalDigits: 2 }
+export const ron = { code: "RON", symbol: "lei", decimalDigits: 2 }
+export const rsd = { code: "RSD", symbol: "Дин.", decimalDigits: 2 }
+export const rub = { code: "RUB", symbol: "һ.", decimalDigits: 2 }
+export const rwf = { code: "RWF", symbol: "R₣", decimalDigits: 2 }
+export const sar = { code: "SAR", symbol: "SR", decimalDigits: 2 }
+export const sek = { code: "SEK", symbol: "kr", decimalDigits: 2 }
+export const sgd = { code: "SGD", symbol: "$", decimalDigits: 2 }
+export const syp = { code: "SYP", symbol: "LS", decimalDigits: 2 }
+export const tjs = { code: "TJS", symbol: "т.р.", decimalDigits: 2 }
+export const tmt = { code: "TMT", symbol: "m.", decimalDigits: 2 }
+export const tnd = { code: "TND", symbol: "DT", decimalDigits: 3 }
+export const ttd = { code: "TTD", symbol: "TT$", decimalDigits: 2 }
+export const twd = { code: "TWD", symbol: "NT$", decimalDigits: 2 }
+export const thb = { code: "THB", symbol: "฿", decimalDigits: 2 }
+export const TRY = { code: "TRY", symbol: "TL", decimalDigits: 2 }
+export const uah = { code: "UAH", symbol: "₴", decimalDigits: 2 }
+export const usd = { code: "USD", symbol: "$", decimalDigits: 2 }
+export const uyu = { code: "UYU", symbol: "$U", decimalDigits: 2 }
+export const uzs = { code: "UZS", symbol: "лв", decimalDigits: 2 }
+export const vef = { code: "VEF", symbol: "Bs.", decimalDigits: 2 }
+export const vnd = { code: "VND", symbol: "₫", decimalDigits: 0 }
+export const xof = { code: "XOF", symbol: "XOF", decimalDigits: 2 }
+export const yer = { code: "YER", symbol: "﷼", decimalDigits: 2 }
+export const zar = { code: "ZAR", symbol: "R", decimalDigits: 2 }
+export const zwl = { code: "ZWL", symbol: "Z$", decimalDigits: 2 }
 
 const currencyMap = new Map<string, Currency>([
   ["AED", aed],
@@ -572,9 +572,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 2,
     },
   ],
-  [
-    "ar-BH", bh,
-  ],
+  ["ar-BH", bh],
   [
     "ar-DZ",
     {
@@ -635,9 +633,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 2,
     },
   ],
-  [
-    "ar-KW", kw,
-  ],
+  ["ar-KW", kw],
   [
     "ar-LB",
     {
@@ -713,9 +709,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 2,
     },
   ],
-  [
-    "ar-SA", sa,
-  ],
+  ["ar-SA", sa],
   [
     "ar-SY",
     {
@@ -1046,12 +1040,8 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 2,
     },
   ],
-  [
-    "de-CH", ch,
-  ],
-  [
-    "de-DE", de,
-  ],
+  ["de-CH", ch],
+  ["de-DE", de],
   [
     "de-LI",
     {
@@ -1142,9 +1132,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 0,
     },
   ],
-  [
-    "en-AU", au,
-  ],
+  ["en-AU", au],
   [
     "en-BZ",
     {
@@ -1160,12 +1148,8 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 0,
     },
   ],
-  [
-    "en-CA", ca
-  ],
-  [
-    "en-GB", en,
-  ],
+  ["en-CA", ca],
+  ["en-GB", en],
   [
     "en-IE",
     {
@@ -1226,9 +1210,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 0,
     },
   ],
-  [
-    "en-NZ", nz,
-  ],
+  ["en-NZ", nz],
   [
     "en-PH",
     {
@@ -1244,9 +1226,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 0,
     },
   ],
-  [
-    "en-SG", sg,
-  ],
+  ["en-SG", sg],
   [
     "en-TT",
     {
@@ -1262,9 +1242,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 0,
     },
   ],
-  [
-    "en-US", us,
-  ],
+  ["en-US", us],
   [
     "en-ZA",
     {
@@ -1730,9 +1708,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 2,
     },
   ],
-  [
-    "fr-FR", fr,
-  ],
+  ["fr-FR", fr],
   [
     "fr-LU",
     {
@@ -1883,9 +1859,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 2,
     },
   ],
-  [
-    "hi-IN", hi,
-  ],
+  ["hi-IN", hi],
   [
     "hr-BA",
     {
@@ -1961,9 +1935,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 3,
     },
   ],
-  [
-    "id-ID", id,
-  ],
+  ["id-ID", id],
   [
     "ig-NG",
     {
@@ -2024,9 +1996,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 2,
     },
   ],
-  [
-    "it-IT", it,
-  ],
+  ["it-IT", it],
   [
     "iu-Cans-CA",
     {
@@ -2057,9 +2027,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 0,
     },
   ],
-  [
-    "ja-JP", ja,
-  ],
+  ["ja-JP", ja],
   [
     "ka-GE",
     {
@@ -2135,9 +2103,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 2,
     },
   ],
-  [
-    "ko-KR", ko,
-  ],
+  ["ko-KR", ko],
   [
     "kok-IN",
     {
@@ -2348,9 +2314,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 0,
     },
   ],
-  [
-    "ms-MY", ms,
-  ],
+  ["ms-MY", ms],
   [
     "mt-MT",
     {
@@ -2666,9 +2630,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 3,
     },
   ],
-  [
-    "ru-RU", ru,
-  ],
+  ["ru-RU", ru],
   [
     "rw-RW",
     {
@@ -3134,9 +3096,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 3,
     },
   ],
-  [
-    "th-TH", th,
-  ],
+  ["th-TH", th],
   [
     "tk-TM",
     {
@@ -3287,9 +3247,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 3,
     },
   ],
-  [
-    "vi-VN", vi,
-  ],
+  ["vi-VN", vi],
   [
     "wo-SN",
     {
@@ -3335,9 +3293,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 2,
     },
   ],
-  [
-    "zh-CN", zh,
-  ],
+  ["zh-CN", zh],
   [
     "zh-HK",
     {
@@ -3383,9 +3339,7 @@ const localeMap = new Map<string, Locale>([
       currencyPattern: 0,
     },
   ],
-  [
-    "zh-TW", tw,
-  ],
+  ["zh-TW", tw],
   [
     "zu-ZA",
     {
